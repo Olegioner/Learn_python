@@ -2,10 +2,16 @@
 [u-<номер символа в таблице Unicode>]
 на соответствующие буквы русского алфавита, и выведите его.'''
 message = input()
-for i in range(len(message)):
+i = 0
+while i < len(message):
     if message[i] == '[':
-        cur_letter = chr(int(message[i+3:i+7]))
+        cur_letter = chr(int(message[i + 3:i + 7]))
         print(cur_letter, end='')
+        i += 8
+    else:
+        print(message[i],end='')
+        i += 1
 
 
-    print(message[i],end='')
+
+
