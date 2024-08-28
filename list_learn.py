@@ -1,4 +1,115 @@
+'''На вход программе подается натуральное число n, а затем n целых чисел.
+Напишите программу, которая сначала выводит все отрицательные числа, затем нули,
+а затем все положительные числа, каждое на отдельной строке.
+Числа должны быть выведены в том же порядке, в котором они были введены.'''
 
+# Это тупо, но работает
+''' n = int(input())
+list_num = []
+list_1 = []
+list_2 = []
+list_0 = []
+list_result = []
+for _ in range(n):
+    list_num.append(int(input()))
+for e in list_num:
+    if e > 0:
+        list_2.append(e)
+    elif e == 0:
+        list_0.append(e)
+    elif e < 0:
+        list_1.append(e)
+list_result = list_1 + list_0 + list_2
+print(*list_result, sep='\n')'''
+
+
+
+
+
+
+'''На вход программе подается натуральное число n, затем n строк, затем число k — количество поисковых запросов, затем
+k строк — поисковые запросы. Напишите программу, которая выводит все введенные строки,
+в которых встречаются одновременно все поисковые запросы.'''
+
+'''n = int(input())
+list_string = []
+list_query = []
+flag = 'YES'
+for _ in range(n):
+    list_string.append(input())
+k = int(input())
+for _ in range(k):
+    list_query.append(input())
+for i in range(n):
+    for j in range(k):
+        if list_query[j].lower() in list_string[i].lower():
+            flag = 'YES'
+        else:
+            flag = 'NO'
+            break
+    if flag == 'YES':
+        print(list_string[i])'''
+
+
+
+
+
+'''На вход программе подается натуральное число n, затем n строк, затем еще одна строка — поисковый запрос.
+Напишите программу, которая выводит все введенные строки, в которых встречается поисковый запрос.'''
+'''
+n = int(input())
+list_string = []
+for _ in range(n):
+    list_string.append(input())
+query = input().lower()
+for i in range(n):
+    if query in list_string[i].lower():
+        print(list_string[i])
+    else:
+        continue'''
+
+
+
+'''На вход программе подается натуральное число n, а затем n строк.
+ Напишите программу, которая выводит только уникальные строки, в том же порядке, в котором они были введены.'''
+
+'''n = int(input())
+list_string = []
+for _ in range(n):
+    text = input()
+    if text in list_string:
+        continue
+    else:
+        list_string.append(text)
+print(*list_string, sep = '\n')'''
+
+
+
+'''При анализе данных, собранных в рамках научного эксперимента,
+бывает полезно удалить самое большое и самое маленькое значение.'''
+
+'''n = int(input())
+list_num = []
+for _ in range(n):
+    list_num.append(int(input()))
+del list_num[list_num.index(max(list_num))]
+del list_num[list_num.index(min(list_num))]
+print(*list_num, sep='\n')'''
+
+
+'''На вход программе подается натуральное число n, а затем n целых чисел.
+Напишите программу, которая для каждого введенного числа x выводит значение функции
+f(x)=x**+2x+1, каждое на отдельной строке.'''
+'''n = int(input())
+list_cur = []
+list_result = []
+for _ in range(n):
+    x =int(input())
+    list_cur.append(x)
+    list_result.append((x**2) + 2 * x +1)
+print(*list_cur, sep='\n')
+print()
+print(*list_result, sep='\n')'''
 
 
 
