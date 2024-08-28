@@ -1,3 +1,40 @@
+'''Все книги в домашней библиотеке Душнилы, друга Сэма, должны быть обязательно отсортированы по возрастанию:
+сначала по фамилиям авторов, а в случае совпадения фамилий – по названиям.
+Напишите программу, которая проверяет, верно ли отсортированы книги.'''
+
+n = int(input())
+book_one = input()
+flag = 'YES'
+for i in range(n-1):
+    book = input()
+    book = book[:book.find(' ')] + ' ' + book[book.find('«'):]
+    book_one = book_one[:book_one.find(' ')] + ' ' + book_one[book_one.find('«'):]
+    if book > book_one:
+        flag = 'YES'
+    else:
+        flag = "NO"
+        break
+    book_one = book
+print(flag)
+
+'''На вход программе подаются 3 различных слова.
+Вам необходимо отсортировать эти слова по возрастанию в лексикографическом порядке и
+вывести их на одной строке, разделяя символом пробела.'''
+
+'''a = input()
+b = input()
+c = input()
+mx_string = max(a,b,c)
+mn_string = min(a,b,c)
+if mn_string < a < mx_string:
+    average_string = a
+elif mn_string < b < mx_string:
+    average_string = b
+elif mn_string < c < mx_string:
+    average_string = c
+print(mn_string, average_string, mx_string)'''
+
+
 '''На вход программе подаются 2 строки. Вам необходимо сравнить эти строки посимвольно,
 не учитывая регистр и игнорируя все небуквенные символы.
 Программа должна вывести «YES», если строки окажутся равны в результате такой проверки,
