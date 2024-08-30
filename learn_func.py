@@ -1,3 +1,145 @@
+'''Напишите функцию solve(a, b, c), которая принимает в качестве аргументов три целых числа a, b, c – коэффициенты квадратного уравнения
+и возвращает его корни в порядке возрастания.'''
+'''import math
+def solve(a,b,c):
+    d = (b**2) - 4 * a * c
+    if d < 0.0:
+        return print('Нет корней')
+    elif d == 0.0:
+        x1 = -(b / (2 * a))
+        return x1, x1
+    elif d > 0.0:
+        x1 = (-b - math.sqrt(math.pow(b,2) - 4 * a * c))/ (2 * a)
+        x2 = (-b + math.sqrt(math.pow(b,2) - 4 * a * c))/ (2 * a)
+        return min(x1,x2), max(x1,x2)'''
+
+
+'''Напишите функцию get_circle(radius),
+которая принимает в качестве аргумента радиус окружности и возвращает
+два значения: длину окружности и площадь круга, ограниченного данной окружностью.'''
+'''import math
+def get_circle(radius):
+    c = 2 * math.pi * radius
+    s = math.pi * (radius ** 2)
+    return c, s'''
+
+
+
+
+
+'''Напишите функцию convert_to_python_case(text),
+которая принимает в качестве аргумента строку в «верблюжьем регистре» и преобразует его в «змеиный регистр».'''
+
+'''def convert_to_python_case(text):
+    text = list(text)
+    text_python = []
+    text_python.append(text[0].lower())
+    for i in range(1,len(text)):
+        if text[i].isupper():
+            text_python.append('_')
+            text_python.append(text[i].lower())
+        else:
+            text_python.append(text[i])
+    return ''.join(text_python)'''
+
+
+
+'''Напишите функцию is_correct_bracket(text), которая принимает в качестве аргумента непустую строку text,
+состоящую из символов ( и ) и возвращает значение True, если поступившая на вход строка является правильной
+скобочной последовательностью, или значение False в противном случае.
+
+Примечание 1. Правильной скобочной последовательностью называется строка, состоящая только из символов
+( и ), где каждой открывающей скобке найдётся парная закрывающая скобка (при этом каждая открывающая
+скобка должна быть левее соответствующей ей закрывающей скобки).'''
+
+'''def is_correct_bracket(text):
+    text = list(text)
+    if text[0] == ')' or text[-1] == '(' or len(text) % 2 != 0:
+        return False
+    count_s = 0
+    for el in text:
+        if el == '(':
+            count_s += 1
+        elif el == ')':
+            count_s -= 1
+            if count_s < 0:
+                return False
+    if count_s != 0:
+        return False
+    else:
+        return True'''
+
+
+'''BEEGEEK наконец-то открыл свой банк, в котором используются специальные банкоматы с необычным паролем.
+Действительный пароль BEEGEEK банка имеет вид a:b:c, где a, b и c – натуральные числа.
+Поскольку основатель BEEGEEK фанатеет от математики, то он решил:
+число a – должно быть палиндромом;
+число b – должно быть простым;
+число c – должно быть четным.
+Напишите функцию is_valid_password(password), которая принимает в качестве аргумента строковое значение
+пароля password и возвращает значение True, если пароль является действительным паролем BEEGEEK банка,
+или False в противном случае.'''
+'''def is_prime(num):
+    count_del = 0
+    for i in range(1,num+1):
+        if num % i == 0:
+            count_del += 1
+    if num == 1:
+        return False
+    if count_del > 2:
+        return False
+    else:
+        return True
+def is_valid_password(password):
+    password = password.split(':')
+    if len(password) > 3:
+        return False
+    flag = 'YES'
+    if password[0] == password[0][::-1]:
+        flag = 'YES'
+    else:
+        return False
+    if is_prime(int(password[1])):
+        flag = 'YES'
+    else:
+        return False
+    if int(password[2]) % 2 == 0:
+        flag = 'YES'
+    else:
+        return False
+    return flag == 'YES'''
+
+
+'''Напишите функцию is_palindrome(text),
+которая принимает в качестве аргумента строку text и возвращает значение
+True если указанный текст является палиндромом и False в противном случае.'''
+
+'''def is_palindrome(text):
+    text = text.lower().replace(' ', '')
+    text_clear = ''
+    for i in range(len(text)):
+        if text[i] not in '!?.,-':
+            text_clear += text[i]
+    return text_clear == text_clear[::-1]'''
+
+
+'''Напишите функцию is_one_away(word1, word2), которая принимает в качестве аргументов два слова word1 и word2
+и возвращает значение True, если слова имеют одинаковую длину и отличаются ровно в одном символе,
+или значение False в противном случае.'''
+
+'''def is_one_away(word1, word2):
+    if len(word1) != len(word2):
+        return False
+    count_sym = 0
+    for i in range(len(word1)):
+        if word1[i] != word2[i]:
+            count_sym += 1
+    if count_sym == 1:
+        return True
+    else:
+        return False'''
+
+
 '''Напишите функцию is_password_good(password),
 которая принимает в качестве аргумента строковое значение пароля password и возвращает
 значение True, если пароль является надежным и False - в противном случае.'''
