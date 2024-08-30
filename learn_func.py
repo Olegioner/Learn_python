@@ -2,9 +2,23 @@
 которая принимает в качестве аргумента строковое значение пароля password и возвращает
 значение True, если пароль является надежным и False - в противном случае.'''
 
-def is_password_good(password):
-
-
+'''def is_password_good(password):
+    count_mn = 0
+    count_mx = 0
+    count_dig = 0
+    if len(password) < 8:
+        return False
+    for i in range(len(password)):
+        if password[i].isupper():
+            count_mx += 1
+        if password[i].islower():
+            count_mn += 1
+        if password[i].isdigit():
+            count_dig += 1
+    if count_mn > 0 and count_mx > 0 and count_dig > 0:
+        return True
+    else:
+        return False'''
 
 
 '''Напишите функцию get_next_prime(num),
