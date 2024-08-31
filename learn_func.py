@@ -1,3 +1,95 @@
+'''Панграмма – это фраза, содержащая в себе все буквы алфавита.
+Обычно панграммы используют для презентации шрифтов, чтобы можно было в одной фразе рассмотреть все глифы.
+Напишите функцию is_pangram(text), которая принимает в качестве аргумента строку текста на английском языке
+и возвращает значение True, если текст является панграммой, или значение False в противном случае.'''
+
+'''def is_pangram(text):
+    text = text.lower()
+    alphabet = [chr(el) for el in range(97, 123)]
+    count = 0
+    for el in alphabet:
+        if el in text:
+           count += 1
+        else:
+            return False
+    if count >= 26:
+        return True
+
+print(is_pangram('Jackdaws love my big sphinx of quartz'))
+print(is_pangram('The jay pig fox zebra and my wolves quack'))
+print(is_pangram('Hello world'))'''
+
+'''Магическая дата – это дата, когда день, умноженный на месяц, равен числу, образованному последними двумя цифрами года.
+Напишите функцию is_magic(date),
+которая принимает в качестве аргумента строковое представление корректной даты и возвращает значение True,
+если дата является магической и False - в противном случае.'''
+'''def is_magic(date):
+    date = date.split('.')
+    if date[1][0] == '0':
+        if int(date[0]) * int(date[1][1]) == int(date[2][2:]):
+            return True
+        else:
+            return False
+    elif int(date[0]) * int(date[1]) == int(date[2][2:]):
+            return True
+    else:
+        return False
+
+print(is_magic('10.06.1960'))
+print(is_magic('11.06.1960'))'''
+
+
+
+
+'''Напишите функцию get_month(language, number),
+которая принимает на вход два аргумента language – язык ru или en и number – номер месяца (от 1 до 12)
+и возвращает название месяца на русском или английском языке.'''
+'''def get_month(language, number):
+    month_ru = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+    month_eng = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    if language == 'ru':
+        return month_ru[number - 1]
+    if language == 'en':
+        return month_eng[number - 1]'''
+
+
+
+'''Напишите функцию number_to_words(num), которая принимает в качестве аргумента натуральное число num и
+возвращает его словесное описание на русском языке.
+Считайте, что число 1≤num≤99'''
+'''def number_to_words(num):
+    list_digit = ['один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять',
+                  'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать']
+    list_number = ['двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто']
+    if num <= 19:
+        return list_digit[num-1]
+    if num > 19 and (num % 10 != 0):
+        return list_number[(num // 10) - 2 ] + ' ' + list_digit[(num % 10) - 1]
+    else:
+        return list_number[(num // 10) - 2 ]
+
+print(number_to_words(31))'''
+'''Интернет-магазин осуществляет экспресс доставку для своих товаров по цене 1000 рублей за первый товар и
+120 рублей за каждый последующий товар. Напишите функцию get_shipping_cost(quantity),
+которая принимает в качестве аргумента натуральное число quantity – количество товаров в заказе –
+и возвращает стоимость доставки.'''
+
+'''def get_shipping_cost(quantity):
+    return 1000 + (120 * (quantity - 1))'''
+
+
+
+'''Напишите функцию draw_triangle(), которая выводит звездный равнобедренный треугольник с основанием и высотой равными
+15 и 8 соответственно:'''
+
+'''def draw_triangle(base, height):
+    for i in range(height):
+        print((' ' * (height - i -1)) + ('*' * (base - (base-(i + i + 1)))))
+
+
+
+draw_triangle(15,8)'''
+
 '''Напишите функцию solve(a, b, c), которая принимает в качестве аргументов три целых числа a, b, c – коэффициенты квадратного уравнения
 и возвращает его корни в порядке возрастания.'''
 '''import math
