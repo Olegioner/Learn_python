@@ -1,4 +1,40 @@
-'''Простая угадайка'''
+'''На вход программе подается строка текста на английском языке, в которой нужно зашифровать все слова.
+Каждое слово строки следует зашифровать с помощью шифра Цезаря (циклического сдвига на длину этого слова).
+Строчные буквы при этом остаются строчными, а прописные – прописными.
+Гарантируется, что между различными словами присутствует один пробел.'''
+text = input().split()
+alphabet = [[chr(el) for el in range(65, 91)],[chr(el) for el in range(97, 123)]]
+encrypt_text = ''
+n = 26
+# Задаём ключ для каждого слова
+encrypt_key = []
+for i in range(len(text)):
+    count = 0
+    for j in range(len(text[i])):
+        if text[i][j] not in ' ,.-:;!?"=)(+-*/':
+            count += 1
+    encrypt_key.append(count)
+# Шифруем текст
+for i in range(len(text)):
+    for j in range(len(text[i])):
+        if text[i][j] in alphabet[0]:
+            symbol = alphabet[0].index(text[i][j])
+            encrypt_text += alphabet[0][(symbol + encrypt_key[i]) % n]
+        if text[i][j] in alphabet[1]:
+            symbol = alphabet[1].index(text[i][j])
+            encrypt_text += alphabet[1][(symbol + encrypt_key[i]) % n]
+        if text[i][j] in ',.-:;!?"=)(+-*/':
+            encrypt_text += text[i][j]
+        if text[i][j] in '0123456789':
+            encrypt_text += text[i][j]
+    encrypt_text += ' '
+
+print(encrypt_text)
+
+
+
+
+'''Простая угадайка
 from random import randint
 
 question = randint(1,100)
@@ -27,7 +63,7 @@ while i == 0:
         print('Вы угадали, поздравляем!')
         print('Всего попыток -', count)
         break
-
+'''
 
 
 
