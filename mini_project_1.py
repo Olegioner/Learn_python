@@ -1,27 +1,38 @@
+'''Простая угадайка'''
 from random import randint
 
 question = randint(1,100)
 print('Добро пожаловать в числовую угадайку')
-answer = input()
-def is_valid(n):
-    return n.isdigit() and (1 <= int(n) <= 100)
-
-while is_valid(answer) == False:
-    print('А может быть все-таки введем целое число от 1 до 100?')
-    answer = input()
-answer = int(answer)
-
-while answer != 200:
-    if answer > question:
+# Проверка введенного числа на соответствие условию
+def is_valid():
+    n = input()
+    while n != -999:
+        if n.isdigit() and (1 <= int(n) <= 100):
+            return int(n)
+        else:
+            print('А может быть все-таки введем целое число от 1 до 100?')
+            return is_valid()
+# тело игры
+i = 0
+count = 0
+while i == 0:
+    answer = is_valid()
+    if  answer > question:
         print('Ваше число больше загаданного, попробуйте еще разок')
+        count += 1
     elif answer < question:
         print('Ваше число меньше загаданного, попробуйте еще разок')
+        count += 1
     else:
         print('Вы угадали, поздравляем!')
+        print('Всего попыток -', count)
         break
 
 
 
+
+
+'''Поиск минимального количества попыток угадать загаданное число'''
 '''from random import randint
 from math import log2, ceil
 n = int(input())
