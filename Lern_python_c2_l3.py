@@ -1,9 +1,68 @@
-'''Напишите программу, которая проверяет симметричность квадратной матрицы относительно главной диагонали.'''
-n = int(input())
-matrix = [[int(i) for i in input().split()] for _ in range(n)]
-for i in range(len(matrix)):
-    for j in range(len(matrix)):
+'''На шахматной доске 8×8 стоит конь.
+Напишите программу, которая отмечает положение коня на доске и все клетки, которые бьёт конь.
+Клетку, где стоит конь, отметьте английской буквой N, а клетки, которые бьёт конь, отметьте символами *,
+остальные клетки заполните точками.'''
+desk = [['.' for el in range(8)] for _ in range(8)]
+alpha = [chr(el) for el in range(97,105)]
+start = list(input())
+ind_start =[alpha.index(start[0])]
+ind_start.append(8-int(start[1]))
+for i in range(len(desk)):
+    for j in range(len(desk)):
+        if i == ind_start[1] and j == ind_start[0]:
+            desk[i][j] = 'N'
+            print(desk[i][j], end=' ')
+        else:
+            print(desk[i][j], end=' ')
+    print()
 
+print(ind_start)
+
+'''Напишите программу, которая поворачивает квадратную матрицу чисел на 90 по часовой стрелке.'''
+
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# for j in range(n):
+#     for i in range(n):
+#         print(matrix[n-1-i][j], end=' ')
+#     print()
+
+
+'''Дана квадратная матрица чисел. Напишите программу, которая зеркально отображает
+её элементы относительно горизонтальной оси симметрии.'''
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# for i in range(n):
+#     for j in range(n):
+#         print(matrix[n-i-1][j], end=' ')
+#     print()
+
+'''зеркально по вертикали'''
+# for i in range(n):
+#     for j in range(n):
+#         print(matrix[i][n-j-1], end=' ')
+#     print()
+'''Дана квадратная матрица чисел. Напишите программу, которая меняет местами элементы, стоящие на главной и
+побочной диагонали, при этом каждый элемент должен остаться в том же столбце
+(то есть в каждом столбце нужно поменять местами элемент на главной диагонали и на побочной диагонали).'''
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# for i in range(n):
+#     matrix[i][i], matrix[n-1-i][i] = matrix[n-1-i][i], matrix[i][i]
+# for i in range(n):
+#     for j in range(n):
+#         print(matrix[i][j], end=' ')
+#     print()
+
+
+'''Напишите программу, которая проверяет симметричность квадратной матрицы относительно главной диагонали.'''
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# matrix_t = [[matrix[j][i] for j in range(n)] for i in range(n)]
+# if matrix == matrix_t:
+#     print('YES')
+# else:
+#     print('NO')
 
 
 
