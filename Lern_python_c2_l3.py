@@ -1,3 +1,50 @@
+'''Программа должна вывести указанную матрицу в соответствии с образцом.'''
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+#
+# for i in range(n):
+#     for j in range(1,m+1):
+#         if i % 2 == 0:
+#             print(str((i*m) + j).ljust(3), end=' ')
+#         else:
+#             print(str(i*m + m - j + 1).ljust(3), end=' ')
+#     print()
+
+
+
+
+
+
+
+'''Программа должна вывести указанную матрицу в соответствии с образцом.'''
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+#
+# for i in range(n):
+#     for j in range(m):
+#         if i + j + 1 < m + 1:
+#             print(i + j + 1, end=' ')
+#         else:
+#             print(((i + j) % m) + 1, end=' ')
+#     print()
+
+
+
+
+
+'''Программа должна вывести указанную матрицу в соответствии с образцом:
+разместить единицы на главной и побочной диагоналях, остальные позиции матрицы заполнить нулями.'''
+# n  = int(input())
+# for i in range(n):
+#     for j in range(n):
+#         if (i == j or i == n - 1 - j) or (i < j and i < n - 1 - j) or (i > j and i > n - 1 - j):
+#             print(1, end=' ')
+#         else:
+#             print(0, end=' ')
+#     print()
+
+
+'''task'''
 # num = [int(i) for i in input().split()]
 # n, m = num[0], num[1]
 # for i in range(1,n+1):
