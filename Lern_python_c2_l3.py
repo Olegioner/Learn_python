@@ -1,22 +1,133 @@
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+# for i in range(1,n+1):
+#     for j in range(m):
+#         print(str(i+j*n).ljust(3), end=' ')
+#     print()
+
+''''task'''
+
+# n = int(input())
+# for i in range(n):
+#     for j in range(n):
+#         if ((i <= j)  and (i > n - 1 -j)) or ((i >= j)  and (i > n - 1 -j)):
+#             print('2', end=' ')
+#         elif ((i <= j) and (i < n - 1 -j)) or ((i >= j)  and (i < n - 1 -j)):
+#             print('0', end=' ')
+#         else:
+#             print('1', end=' ')
+#     print()
+
+
+
+'''На вход программе подаются два натуральных числа n и m. Напишите программу для создания матрицы размером
+n×m, заполнив её символами . и * в шахматном порядке. В левом верхнем углу должна стоять точка.
+Выведите полученную матрицу на экран, разделяя элементы пробелами.'''
+# num = input().split()
+# n, m = int(num[0]), int(num[1])
+#
+# for i in range(n):
+#     for j in range(m):
+#         if (i % 2 == 0 and j % 2 != 0) or  (i % 2 != 0 and j % 2 == 0):
+#             print('*', end=' ')
+#         else:
+#             print('.', end=' ')
+#     print()
+
+'''Магическим квадратом порядка n называется квадратная таблица размера n×n, составленная из всех чисел 1,2,3,…,n
+так, что суммы по каждому столбцу, каждой строке и каждой из двух диагоналей равны между собой.
+Напишите программу, которая проверяет, является ли заданная квадратная матрица магическим квадратом.'''
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# # проверка на уникальность
+# matrix_ref = [el for el in range(1,n*n+1)]
+# matrix_cur = []
+# [matrix_cur.extend(row) for row in matrix]
+# matrix_cur.sort()
+# # Проверка сумм сторон
+# first = sum(matrix[0])
+# flag = 'YES'
+# if matrix_ref == matrix_cur:
+#     for row in matrix:
+#         if sum(row) != first:
+#             flag = 'NO'
+#             break
+#     for j in range(len(matrix)):
+#         sm = 0
+#         for i in range(len(matrix)):
+#             sm += matrix[i][j]
+#         if sm != first:
+#             flag = 'NO'
+#             break
+#     sm_main = 0
+#     sm_side = 0
+#     for i in range(len(matrix)):
+#         sm_main += matrix[i][i]
+#         sm_side += matrix[i][n-i-1]
+#     if sm_main != sm_side and sm_main != first:
+#         flag = 'NO'
+# else:
+#     flag = 'NO'
+# print(flag)
+
+
+
+
+
+
+
+
+
+
 '''На шахматной доске 8×8 стоит конь.
 Напишите программу, которая отмечает положение коня на доске и все клетки, которые бьёт конь.
 Клетку, где стоит конь, отметьте английской буквой N, а клетки, которые бьёт конь, отметьте символами *,
 остальные клетки заполните точками.'''
-desk = [['.' for el in range(8)] for _ in range(8)]
-alpha = [chr(el) for el in range(97,105)]
-start = list(input())
-ind_start =[alpha.index(start[0])]
-ind_start.append(8-int(start[1]))
-for i in range(len(desk)):
-    for j in range(len(desk)):
-        if i == ind_start[1] and j == ind_start[0]:
-            desk[i][j] = 'N'
-            print(desk[i][j], end=' ')
-        else:
-            print(desk[i][j], end=' ')
-    print()
+# я этим не горжусь
+# desk = [['.' for el in range(8)] for _ in range(8)]
+# alpha = [chr(el) for el in range(97,105)]
+# start = list(input())
+# ind_start =[alpha.index(start[0])]
+# ind_start.append(8-int(start[1]))
+# for i in range(len(desk)):
+#     for j in range(len(desk)):
+#         if i == ind_start[1] and j == ind_start[0]:
+#             desk[i][j] = 'N'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] + 2) and (j == ind_start[0] - 1):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] + 2) and (j == ind_start[0] + 1):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] + 1) and (j == ind_start[0] + 2):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] + 1) and (j == ind_start[0] - 2):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] - 2) and (j == ind_start[0] - 1):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] - 1) and (j == ind_start[0] - 2):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] - 2) and (j == ind_start[0] + 1):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         elif (i == ind_start[1] - 1) and (j == ind_start[0] + 2):
+#             desk[i][j] = '*'
+#             print(desk[i][j], end=' ')
+#         else:
+#             print(desk[i][j], end=' ')
+#     print()
 
-print(ind_start)
+
+
+
+
+
+
 
 '''Напишите программу, которая поворачивает квадратную матрицу чисел на 90 по часовой стрелке.'''
 
