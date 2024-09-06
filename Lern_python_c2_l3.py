@@ -1,3 +1,18 @@
+'''Программа должна вывести указанную матрицу в соответствии с образцом'''
+num = [int(i) for i in input().split()]
+n, m = num[0], num[1]
+for i in range(n):
+    for j in range(1, m+1):
+        if (i < i and i < n - 1 - j) or (i > j and i < n - 1 - j):
+
+
+
+
+
+
+
+
+
 '''Программа должна вывести указанную матрицу в соответствии с образцом.'''
 # num = [int(i) for i in input().split()]
 # n, m = num[0], num[1]
