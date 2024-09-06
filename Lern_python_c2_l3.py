@@ -1,14 +1,30 @@
 '''Программа должна вывести указанную матрицу в соответствии с образцом'''
 num = [int(i) for i in input().split()]
 n, m = num[0], num[1]
-for i in range(n):
-    for j in range(1, m+1):
-        if (i < i and i < n - 1 - j) or (i > j and i < n - 1 - j):
+matrix = [[0] * m for _ in range(n)]
+count = 2
+i = 0
+j = 1
+matrix[0][0] = 1
+poz = 0
+while count < n * m + 1:
+    print('Итерация', i, j, count)
+    matrix[i][j] = count
+    if (i <= j and i < n -1- j) or (i >= j and i < n -1- j):
+        while j!=0:
+            i += 1
+            j = j - 1
+            poz = max(poz, j)
+            count += 1
+        j = poz + 1
 
 
+#print(matrix)
 
-
-
+for row in matrix:
+    for el in row:
+        print(str(el).ljust(3), end=' ')
+    print()
 
 
 
