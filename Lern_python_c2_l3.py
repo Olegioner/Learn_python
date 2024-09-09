@@ -1,15 +1,87 @@
-'''Программа должна вывести указанную матрицу в соответствии с образцом'''
+'''Умножение матриц'''
 num = [int(i) for i in input().split()]
 n, m = num[0], num[1]
-for i in range(n):
-    for j in range(1, m+1):
-        if (i < i and i < n - 1 - j) or (i > j and i < n - 1 - j):
+matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
+null = input()
+matrix_b = [[int(i) for i in input().split()] for _ in range(n)]
+
+
+for i in range(len(matrix_a)):
+     for j in range(len(matrix_a[i])):
+         print(, end=' ')
+     print()
 
 
 
+'Сложение матриц'
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+# matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
+# null = input()
+# matrix_b = [[int(i) for i in input().split()] for _ in range(n)]
+#
+#
+# for i in range(len(matrix_a)):
+#     for j in range(len(matrix_a[i])):
+#         print(matrix_a[i][j] + matrix_b[i][j], end=' ')
+#     print()
+
+'''Программа должна вывести указанную матрицу в соответствии с образцом. Заполнение спиралью '''
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+#
+# i = 0
+# j = 0
+# cnt = 1
+#
+# a = [[0 for _ in range(m)] for _ in range(n)]
+#
+# while cnt < m * n:
+#     while j < m - 1 and a[i][j + 1] == 0:
+#         a[i][j] = cnt
+#         j += 1
+#         cnt += 1
+#
+#     while i < n - 1 and a[i + 1][j] == 0:
+#         a[i][j] = cnt
+#         i += 1
+#         cnt += 1
+#
+#     while j > 0 and a[i][j - 1] == 0:
+#         a[i][j] = cnt
+#         j -= 1
+#         cnt += 1
+#
+#     while i > 0 and a[i - 1][j] == 0:
+#         a[i][j] = cnt
+#         i -= 1
+#         cnt += 1
+#
+# a[i][j] = cnt
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(a[i][j]).ljust(3), end=' ')
+#     print()
 
 
-
+'''Программа должна вывести указанную матрицу в соответствии с образцом. По диагоналям'''
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+# matrix = [[0 for _ in range(m)] for _ in range(n)]
+# cnt = 1
+#
+# for d in range(n + m - 1):
+#     for i in range(n):
+#         for j in range(m):
+#             if i + j == d:
+#                 matrix[i][j] = cnt
+#                 cnt += 1
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end="")
+#     print()
 
 
 
