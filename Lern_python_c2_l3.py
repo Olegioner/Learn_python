@@ -1,15 +1,15 @@
 '''Умножение матриц'''
-num = [int(i) for i in input().split()]
-n, m = num[0], num[1]
-matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
-null = input()
-matrix_b = [[int(i) for i in input().split()] for _ in range(n)]
-
-
-for i in range(len(matrix_a)):
-     for j in range(len(matrix_a[i])):
-         print(, end=' ')
-     print()
+# num = [int(i) for i in input().split()]
+# n, m = num[0], num[1]
+# matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
+# null = input()
+# matrix_b = [[int(i) for i in input().split()] for _ in range(n)]
+#
+#
+# for i in range(len(matrix_a)):
+#      for j in range(len(matrix_a[i])):
+#          print(, end=' ')
+#      print()
 
 
 
