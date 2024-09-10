@@ -1,25 +1,32 @@
 '''Возведение в степень матрицы'''
-n = int(input())
-matrix = [[int(i) for i in input().split()]for _ in range(n)]
-m = int(input())
-matrix_a = matrix
-matrix_b = [[0 for el in range(n)]for _ in range(n)]
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# m = int(input())
+# matrix_a = [[0 for el in range(n)] for _ in range(n)]
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[i])):
+#         matrix_a[i][j] = matrix[i][j]
+# matrix_b = [[0 for el in range(n)] for _ in range(n)]
+# sm = 0
+# result = ''
+# for k in range(m-1):
+#     for i in range(n):
+#         for j in range(n):
+#             for a in range(n):
+#                 sm += matrix[i][a] * matrix_a[a][j]
+#             matrix_b[i][j] = sm
+#             sm = 0
+#
+#     for i in range(len(matrix_b)):
+#         for j in range(len(matrix_b[i])):
+#             matrix_a[i][j] = matrix_b[i][j]
+#
+# for i in range(len(matrix_b)):
+#     for j in range(len(matrix_b[i])):
+#         print(matrix_b[i][j], end=' ')
+#     print()
 
-while m != 0:
-    for i in range(n):
-        for j in range(n):
-            sm = 0
-            for a in range(n):
-                sm += matrix[i][a] * matrix_a[a][j]
-            matrix_b[i][j] = sm
 
-    m-= 1
-    matrix_a = matrix_b
-
-for i in range(len(matrix_b)):
-    for j in range(len(matrix_b[i])):
-        print(matrix_b[i][j], end=' ')
-    print()
 
 '''Умножение матриц'''
 # num = [int(i) for i in input().split()]
