@@ -1,8 +1,34 @@
+'''Даны по 10-балльной шкале оценки по биологии трех учеников. Напишите программу,
+которая выводит множество оценок, не встречающихся ни у одного из трех учеников.'''
+# my_set1 = (set(int(el) for el in input().split()))
+# my_set2 = (set(int(el) for el in input().split()))
+# my_set3 = (set(int(el) for el in input().split()))
+# set_all = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+# print(*sorted(set_all - (my_set1 | my_set2 | my_set3)))
+
+
+'''Даны по 10-балльной шкале оценки по физике трех учеников. Напишите программу, которая выводит множество оценок
+третьего ученика, которые не встречаются ни у первого, ни у второго ученика.'''
+# my_set1 = (set(int(el) for el in input().split()))
+# my_set2 = (set(int(el) for el in input().split()))
+# my_set3 = (set(int(el) for el in input().split()))
+# print(*sorted(my_set3 - (my_set1 | my_set2), reverse=True))
+
+'''Даны оценки по математике трёх учеников в 10-балльной шкале. Напишите программу,
+которая выводит такие оценки, которые встречаются не более, чем у двух учеников.'''
+
+# my_set1 = (set(int(el) for el in input().split()))
+# my_set2 = (set(int(el) for el in input().split()))
+# my_set3 = (set(int(el) for el in input().split()))
+# print(*sorted(my_set1 ^ my_set2 | my_set1 ^ my_set3 | my_set2 ^ my_set3))
+
 '''Даны по 10-балльной шкале оценки по информатике трех учеников.
 Напишите программу, выводящую множество оценок, которые есть и у первого, и у второго учеников, но которых нет у третьего ученика.'''
 
-
-
+# my_set1 = (set(int(el) for el in input().split()))
+# my_set2 = (set(int(el) for el in input().split()))
+# my_set3 = (set(int(el) for el in input().split()))
+# print(*sorted((my_set1 & my_set2) - my_set3, reverse= True))
 
 '''На вход программе подаются два числа. Напишите программу, которая определяет,
 входят ли в запись первого числа все цифры, содержащиеся в записи второго
