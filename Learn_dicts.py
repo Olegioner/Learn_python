@@ -1,3 +1,80 @@
+'''В первой строке задано зашифрованное слово. Во второй строке задано одно целое число n – количество букв в словаре.
+В следующих n строках записано, сколько раз конкретная буква алфавита встречается в этом слове – <буква>: <частота>.'''
+
+n = input()
+dict_code = {}
+for i in dict_code:
+    dict_code[i] = dict_code.get(i, 0) + 1
+
+print(dict_code)
+
+
+
+'''Тимур записал телефоны всех своих друзей, чтобы автоматизировать поиск нужного номера.
+У каждого из друзей Тимура может быть один или более телефонных номеров.
+Напишите программу, которая поможет Тимуру находить все номера определённого друга.'''
+# n = int(input())
+# dict_contacts = {}
+# for _ in range(n):
+#     tel, name = input().lower().split()
+#     if name in dict_contacts:
+#         dict_contacts[name] += ' ' + tel
+#     else:
+#         dict_contacts[name] = tel
+#
+# m = int(input())
+# for _ in range(m):
+#     print(dict_contacts.get(input().lower(), 'абонент не найден'))
+
+
+'''Программа получает на вход количество стран n. Далее идет n строк, каждая строка начинается с названия страны,
+затем идут названия городов этой страны. В следующей строке записано число m, далее идут m запросов — названия каких-то
+m городов, из перечисленных выше.'''
+# n = int(input())
+# dict_country = {}
+# for _ in range(n):
+#     country, *city = input().split()
+#     dict_country[country] = city
+# m = int(input())
+# list_city = [input() for _ in range(m)]
+# for el in list_city:
+#     for key in dict_country.keys():
+#         if el in dict_country[key]:
+#             print(key)
+
+'''Вам дан словарь, состоящий из пар слов-синонимов. Повторяющихся слов в словаре нет. Напишите программу,
+которая для одного данного слова определяет его синоним.'''
+# n = int(input())
+# dict_synonyms ={}
+# for _ in range(n):
+#     key, value = input().split()
+#     dict_synonyms[key] = value
+# word = input()
+# for key,value in dict_synonyms.items():
+#     if key == word:
+#         print(value)
+#     elif value == word:
+#         print(key)
+
+
+'''На вход программе подаются два предложения. Напишите программу, которая определяет,
+являются они анаграммами или нет. Ваша программа должна игнорировать регистр символов, знаки препинания и пробелы.'''
+# ТРЭШ
+# first_text = ''.join(sorted([el for el in  list(input().lower()) if el not in ' .,!?:;-']))
+# second_text = ''.join(sorted([el for el in  list(input().lower()) if el not in ' .,!?:;-']))
+# first_dict = {i:first_text[i] for i in range(len(first_text))}
+# second_dict = {i:second_text[i] for i in range(len(second_text))}
+# print('YES') if first_dict == second_dict else print('NO')
+
+
+'''На вход программе подаются два слова. Напишите программу, которая определяет, являются ли они анаграммами.'''
+# dict_anagrams = {input():input()}
+# for key, value in dict_anagrams.items():
+#     if sorted(key) == sorted(value):
+#         print('YES')
+#     else:
+#         print('NO')
+
 '''В первой строке задано одно целое число n — количество слов в словаре. В следующих n строках записаны слова
 и их определения, разделенные двоеточием и символом пробела. В следующей строке записано целое число m — количество
 поисковых слов, чье определение нужно вывести. В следующих m строках записаны сами слова, по одному на строке.'''
