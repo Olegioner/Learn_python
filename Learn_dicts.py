@@ -1,14 +1,36 @@
+'''Task'''
+# numbers = [34, 10, 4, 6, 10, 23, 90, 100, 21, 35, 95, 1, 36, 38, 19, 1, 6, 87, 1000, 13456, 360]
+#
+# result = {numbers[i] : [j for j in range(1, numbers[i]+1) if numbers[i] % j == 0] for i in range(len(numbers))}
+# print(result)
+
+'''Task'''
+# s = '1:men 2:kind 90:number 0:sun 34:book 56:mountain 87:wood 54:car 3:island 88:power 7:box 17:star 101:ice'
+# s = s.split()
+# s = [s[i].split(':') for i in range(len(s))]
+#
+# result = {int(s[i][0]):s[i][1] for i in range(len(s))}
+# 2 решение: result = {int(i.split(":")[0]): i.split(":")[1] for i in s.split()}
+# 3 решение: result = {int(k):v for k, v in [l.split(':') for l in s.split()]}
+
+
 '''В первой строке задано зашифрованное слово. Во второй строке задано одно целое число n – количество букв в словаре.
 В следующих n строках записано, сколько раз конкретная буква алфавита встречается в этом слове – <буква>: <частота>.'''
 
-n = input()
-dict_code = {}
-for i in dict_code:
-    dict_code[i] = dict_code.get(i, 0) + 1
-
-print(dict_code)
-
-
+# code_list = list(input())
+#
+# m = int(input())
+# dict_letter = {}
+# for _ in range(m):
+#     k,v = input().split(': ')
+#     dict_letter[k] = int(v)
+# result = ''
+# for el in code_list:
+#     for k,v in dict_letter.items():
+#         if code_list.count(el) == dict_letter[k]:
+#             result += k
+#
+# print(result)
 
 '''Тимур записал телефоны всех своих друзей, чтобы автоматизировать поиск нужного номера.
 У каждого из друзей Тимура может быть один или более телефонных номеров.
