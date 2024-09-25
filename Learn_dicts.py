@@ -1,4 +1,42 @@
 '''Task'''
+# tuples = [(1, 2, 3), (4, 5, 6), (7, 8, 9),
+#           (10, 11, 12), (13, 14, 15), (16, 17, 18),
+#           (19, 20, 21), (22, 23, 24), (25, 26, 27),
+#           (28, 29, 30), (31, 32, 33), (34, 35, 36)]
+#
+# result = {el[0]:el[1:] for el in tuples}
+# print(result)
+
+
+'''Task'''
+# students = {'Timur': (170, 75), 'Ruslan': (180, 105), 'Soltan': (192, 68), 'Roman': (175, 70),
+#             'Madlen': (160, 50), 'Stefani': (165, 70), 'Tom': (190, 90), 'Jerry': (180, 87),
+#             'Anna': (172, 67), 'Scott': (168, 78), 'John': (186, 79), 'Alex': (195, 120),
+#             'Max': (200, 110), 'Barak': (180, 89), 'Donald': (170, 80), 'Rustam': (186, 100),
+#             'Alice': (159, 59), 'Rita': (170, 80), 'Mary': (175, 69), 'Jane': (190, 80)}
+#
+# result = {k:v for k,v in students.items() if v[0] > 167 and v[1] < 75 }
+# print(result)
+
+
+"""Task"""
+# letters = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J', 10: 'K',
+#            11: 'L', 12: 'M', 13: 'N', 14: 'O', 15: 'P', 16: 'Q', 17: 'R', 18: 'S', 19: 'T', 20: 'U',
+#            21: 'V', 22: 'W', 23: 'X', 24: 'Y', 26: 'Z'}
+#
+# remove_keys = [1, 5, 7, 12, 17, 19, 21, 24]
+#
+# result = {k:v for k,v in letters.items() if k not in remove_keys}
+# print(result)
+
+'''Task'''
+
+# words = ['hello', 'bye', 'yes', 'no', 'python', 'apple', 'maybe', 'stepik', 'beegeek']
+# result = {words[i]:[ord(words[i][j]) for j in range(len(words[i]))]for i in range(len(words))}
+# print(result)
+
+
+'''Task'''
 # numbers = [34, 10, 4, 6, 10, 23, 90, 100, 21, 35, 95, 1, 36, 38, 19, 1, 6, 87, 1000, 13456, 360]
 #
 # result = {numbers[i] : [j for j in range(1, numbers[i]+1) if numbers[i] % j == 0] for i in range(len(numbers))}
