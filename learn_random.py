@@ -1,3 +1,37 @@
+'''Напишите программу, которая с помощью модуля random генерирует n паролей длиной m символов,
+состоящих из строчных и прописных английских букв и цифр, кроме тех, которые легко перепутать между собой'''
+# import string
+# from random import sample,shuffle,choice
+# n, m = int(input()), int(input())
+# list_up_letter = [el for el in list(string.ascii_uppercase) if el not in 'IO']
+# list_low_letter = [el for el in list(string.ascii_lowercase) if el not in 'lo']
+# list_digit = [el for el in list(string.digits) if el not in '10']
+# list_all = [el for el in list(string.ascii_letters + string.digits) if el not in 'Il1oO0']
+# shuffle(list_all)
+#
+# for i in range(n):
+#     passwd = [choice(i) for i in (list_up_letter, list_low_letter, list_digit)] + [choice(list_all) for _ in range(3, m)]
+#     shuffle(passwd)
+#     print(''.join(passwd))
+
+
+'''Напишите программу, которая случайным образом назначает каждому ученику его тайного друга,
+который будет вместе с ним решать задачи по программированию.'''
+# from random import choice,shuffle
+# n = int(input())
+# dict_students = {i : input() for i in range(n)}
+# list_ind = [i for i in range(n)]
+# list_friends = list_ind.copy()
+# for i in range(n):
+#     ind = choice(list_ind[:i]+list_ind[i+1:])
+#     print(f'{dict_students[i]} - {dict_students[ind]}')
+#     list_ind.pop(list_ind.index(ind))
+
+
+
+
+
+
 '''Напишите программу, которая с помощью модуля random генерирует и выводит случайную карточку для игры в бинго.'''
 # from random import randint, choice
 # # Получаем множество из 25 уникальных чисел
