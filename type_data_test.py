@@ -1,9 +1,81 @@
+'''Task 7'''
+# n = int(input())
+# z1,z2 = complex(input()), complex(input())
+# res = z1**n + z2**n + z1.conjugate()**n + z2.conjugate()**(n + 1)
+# print(res)
+
+'''Комплексные числа хранятся в списке numbers. Дополните приведенный код так, чтобы он вывел комплексное число
+с наибольшим модулем и сам модуль числа на отдельных строках.'''
+# numbers = [3 + 4j, 3 + 1j, -7 + 3j, 4 + 8j, -8 + 10j, -3 + 2j, 3 - 2j, -9 + 9j, -1 - 1j, -1 - 10j, -20 + 15j, -21 + 1j, 1j, -3 + 8j, 4 - 6j, 8 + 2j, 2 + 3j]
+# dict_num = {abs(el) : el for el in numbers}
+# m = max(dict_num)
+# print(dict_num[m])
+# print(m)
+'''Даны два комплексных числа. Напишите программу, которая вычисляет и выводит их сумму, разность и произведение.'''
+# a,b  = complex(input()), complex(input())
+# print(f'{a} + {b} = {a + b}')
+# print(f'{a} - {b} = {a - b}')
+# print(f'{a} * {b} = {a * b}')
+
+
+'''На вход программе подается натуральное число n. Напишите программу, которая выводит в порядке возрастания
+все несократимые дроби, заключённые между 0 и 1, знаменатель которых не превосходит n.'''
+# from fractions import Fraction
+# n = int(input())
+# set_fraction = set()
+# [[set_fraction.add(Fraction(i, j)) for j in range(1, n+1) if 0 < (i / j) < 1] for i in range(1, n+1)]
+# for el in sorted(set_fraction):
+#     print(el)
+
+
+'''На вход программе подается натуральное число n. Напишите программу, которая находит наибольшую
+правильную несократимую дробь с суммой числителя и знаменателя равной n.'''
+# from fractions import Fraction
+# n = int(input())
+# list_fractions = [[Fraction(i,j) for j in range(1,n+1)] for i in range(1,n+1)]
+# list_f = []
+# for i in range(len(list_fractions)):
+#     for j in range(len(list_fractions[i])):
+#         if list_fractions[i][j].numerator + list_fractions[i][j].denominator == n:
+#             if list_fractions[i][j].numerator < list_fractions[i][j].denominator:
+#                 list_f.append(list_fractions[i][j])
+# print(max(list_f))
 
 
 
+'''Task 6'''
+# from fractions import Fraction
+# from math import factorial
+# n = int(input())
+# sm = 0
+# for i in range(1, n+1):
+#     sm += Fraction(1, factorial(i))
+# print(sm)
+
+'''Task 5'''
+# from fractions import Fraction
+# n = int(input())
+# sm = 0
+# for i in range(1, n+1):
+#     sm += Fraction(1, i**2)
+# print(sm)
 
 
+'''Task 4'''
+# from fractions import Fraction as F
+# a = input()
+# b = input()
+# af = F(a)
+# bf = F(b)
+# print(f'{a} + {b} = {af + bf}')
+# print(f'{a} - {b} = {af - bf}')
+# print(f'{a} * {b} = {af * bf}')
+# print(f'{a} / {b} = {af / bf}')
 
+
+'''Task 3'''
+# from fractions import Fraction
+# print(Fraction(int(input()), int(input())))
 
 '''На вход программе подается Decimal число d. Напишите программу, которая вычисляет значение выражения: '''
 # from decimal import Decimal as D
