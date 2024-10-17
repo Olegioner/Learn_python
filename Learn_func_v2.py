@@ -1,31 +1,61 @@
+'''Напишите программу, которая с помощью встроенных функций filter() и sorted() выводит слова из списка words,
+имеющие длину ровно 6 символов. Слова следует вывести в алфавитном порядке на одной
+строке, разделив символом пробела.'''
+#
+# words = ['beverage', 'monday', 'abroad', 'bias', 'abuse', 'abolish', 'abuse', 'abuse', 'bid',
+#          'wednesday', 'able', 'betray', 'accident', 'abduct', 'bigot', 'bet', 'abandon', 'besides',
+#          'access', 'friday', 'bestow', 'abound', 'absent', 'beware', 'abundant', 'abnormal', 'aboard',
+#          'about', 'accelerate', 'abort', 'thursday', 'tuesday', 'sunday', 'berth', 'beyond', 'benevolent',
+#          'abate', 'abide', 'bicycle', 'beside', 'accept', 'berry', 'bewilder', 'abrupt', 'saturday',
+#          'accessory', 'absorb']
+# print(*sorted(filter(lambda text: len(text) == 6, words)))
+
+'''Напишите функцию func, используя синтаксис анонимных функций, которая принимает строковый аргумент и
+возвращает значение True, если переданный аргумент начинается и заканчивается на английскую букву a
+(регистр буквы неважен) и False в противном случае.'''
+
+# func = lambda text: True if text[0].lower() == 'a' and text[-1].lower() == 'a' else False
+
+'''Напишите функцию is_non_negative_num, используя синтаксис анонимных функций, которая принимает строковый аргумент
+и возвращает значение True, если переданный аргумент является неотрицательным числом (целым или вещественным),
+или False в противном случае.'''
+
+# is_non_negative_num = lambda num: True if ((num.replace('.','',1)).isdigit() and num.count('.') <= 1) and float(num) >= 0 else False
+# is_num = lambda q: ((q.replace('.', '', 1)).lstrip('-')).isdigit() and q[1:].count('-') == 0
+
+
+'''Напишите функцию func, используя синтаксис анонимных функций, которая принимает целочисленный аргумент
+ и возвращает значение True, если он делится без остатка на 19 или на 13 и False в противном случае.'''
+# func = lambda x: True if x % 19 == 0 or x % 13 == 0 else False
+
 '''TASK'''
-from functools import reduce
-
-data = [['Tokyo', 35676000, 'primary'],
-        ['New York', 19354922, 'nan'],
-        ['Mexico City', 19028000, 'primary'],
-        ['Mumbai', 18978000, 'admin'],
-        ['Sao Paulo', 18845000, 'admin'],
-        ['Delhi', 15926000, 'admin'],
-        ['Shanghai', 14987000, 'admin'],
-        ['Kolkata', 14787000, 'admin'],
-        ['Los Angeles', 12815475, 'nan'],
-        ['Dhaka', 12797394, 'primary'],
-        ['Buenos Aires', 12795000, 'primary'],
-        ['Karachi', 12130000, 'admin'],
-        ['Cairo', 11893000, 'primary'],
-        ['Rio de Janeiro', 11748000, 'admin'],
-        ['Osaka', 11294000, 'admin'],
-        ['Beijing', 11106000, 'primary'],
-        ['Manila', 11100000, 'primary'],
-        ['Moscow', 10452000, 'primary'],
-        ['Istanbul', 10061000, 'admin'],
-        ['Paris', 9904000, 'primary']]
-
-
-big_city = sorted(map(lambda el: el[0], filter(lambda x:x if x[2] == 'primary' and x[1] > 10**7 else '', data)))
-big_city_output = reduce(lambda x, y: x + y + ', ' if y != big_city[-1] else x + y, big_city , 'Cities: ')
-print(big_city_output)
+# from functools import reduce
+#
+# data = [['Tokyo', 35676000, 'primary'],
+#         ['New York', 19354922, 'nan'],
+#         ['Mexico City', 19028000, 'primary'],
+#         ['Mumbai', 18978000, 'admin'],
+#         ['Sao Paulo', 18845000, 'admin'],
+#         ['Delhi', 15926000, 'admin'],
+#         ['Shanghai', 14987000, 'admin'],
+#         ['Kolkata', 14787000, 'admin'],
+#         ['Los Angeles', 12815475, 'nan'],
+#         ['Dhaka', 12797394, 'primary'],
+#         ['Buenos Aires', 12795000, 'primary'],
+#         ['Karachi', 12130000, 'admin'],
+#         ['Cairo', 11893000, 'primary'],
+#         ['Rio de Janeiro', 11748000, 'admin'],
+#         ['Osaka', 11294000, 'admin'],
+#         ['Beijing', 11106000, 'primary'],
+#         ['Manila', 11100000, 'primary'],
+#         ['Moscow', 10452000, 'primary'],
+#         ['Istanbul', 10061000, 'admin'],
+#         ['Paris', 9904000, 'primary']]
+#
+#
+# big_city = sorted(map(lambda el: el[0], filter(lambda x:x if x[2] == 'primary' and x[1] > 10**7 else '', data)))
+# big_city_output = reduce(lambda x, y: x + y + ', ' if y != big_city[-1] else x + y, big_city , 'Cities: ')
+# print(big_city_output)
 
 
 '''Task'''
