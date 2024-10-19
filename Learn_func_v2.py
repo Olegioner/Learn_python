@@ -1,3 +1,16 @@
+'''Программа должна вывести одно число — значение указанного многочлена при заданном значении x.'''
+# from functools import reduce
+#
+# def evaluate(coefficients, x):
+#     new_cf = map(lambda el, i: el * x**i, coefficients, range(len(coefficients)-1, -1, -1))
+#     return reduce(lambda a,b: a + b, new_cf, 0)
+#
+#
+# coefficients = [int(el) for el in input().split()]
+# x = int(input())
+#
+# print(evaluate(coefficients, x))
+
 '''Напишите программу, которая по трем компонентам заданного цвета, находит компоненты противоположного цвета. '''
 
 # print(*list(map(lambda x: 255 - x, [int(el) for el in input().split()])))
@@ -8,8 +21,7 @@
 Элементы отсортированного списка выведите на одной строке, разделив символом пробела.'''
 
 # mixed_list = ['a', 'ab', 3, 5, 1, 8, 0, 'c', 'ac', 'aab']
-# print(sorted(mixed_list, key=lambda x:))
-
+# print(*(sorted(filter(lambda x: isinstance(x, int), mixed_list)) + sorted(filter(lambda x: isinstance(x, str), mixed_list))))
 
 
 '''Список mixed_list содержит целочисленные и строковые значения. Напишите программу,
