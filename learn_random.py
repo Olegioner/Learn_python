@@ -1,14 +1,15 @@
+
 '''Напишите программу, которая при помощи метода Монте-Карло определяет приближённое значение числа π.'''
 
-from random import uniform
-s0 = 4
-k = 0
-n = 10**6
-for _ in range(n):
-    x, y = uniform(-1, 1), uniform(-1, 1)
-    if x**2 + y**2 <= 1:
-        k += 1
-print((k/n)*s0)
+# from random import uniform
+# s0 = 4
+# k = 0
+# n = 10**6
+# for _ in range(n):
+#     x, y = uniform(-1, 1), uniform(-1, 1)
+#     if x**2 + y**2 <= 1:
+#         k += 1
+# print((k/n)*s0)
 
 
 
