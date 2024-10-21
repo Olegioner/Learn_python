@@ -1,3 +1,36 @@
+'''Используя параллельную итерацию сразу по трем спискам countries, capitals и population выведите информацию о стране'''
+
+# countries = ['Russia', 'USA', 'UK', 'Germany', 'France', 'India']
+# capitals = ['Moscow', 'Washington', 'London', 'Berlin', 'Paris', 'Delhi']
+# population = [145_934_462, 331_002_651, 80_345_321, 67_886_011, 65_273_511, 1_380_004_385]
+#
+# for countries, capitals, population in zip(countries, capitals, population):
+#     print(f'{capitals} is the capital of {countries}, population equal {population} people.')
+
+
+'''Task'''
+'''После'''
+# def ignore_command(command):
+#     ignore = ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']
+#     return any(map(lambda x: x in command, ignore))
+#
+#
+#
+# '''ДО'''
+# # def ignore_command(command):
+# #     ignore = ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']
+# #
+# #     for word in ignore:
+# #         if word in command:
+# #             return True
+# #     return False
+#
+# print(ignore_command('get ip'))
+# print(ignore_command('select all'))
+# print(ignore_command('delete'))
+# print(ignore_command('trancate'))
+
+
 '''Напишите программу, которая по трем компонентам заданного цвета, находит компоненты противоположного цвета. '''
 
 # print(*list(map(lambda x: 255 - x, [int(el) for el in input().split()])))
