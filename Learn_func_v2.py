@@ -1,3 +1,27 @@
+'''IP-адрес – уникальный числовой идентификатор устройства в компьютерной сети, работающей по протоколу TCP/IP.'''
+
+
+print(all(map(lambda x: x.isdigit() and 0 <= int(x) <= 255, input().split('.'))))
+
+'''На вход программе подаются три строки текста с вещественными числами, значениями абсцисс (x), ординат (y)
+и аппликат (z) точек трехмерного пространства. Напишите программу для проверки расположения всех точек с введенными
+координатами внутри либо на поверхности шара с центром в начале координат и радиусом R =2.'''
+
+# r = 2
+#
+# abscissas = [float(el) for el in input().split()]
+# ordinates = [float(el) for el in input().split()]
+# applicates = [float(el) for el in input().split()]
+#
+# res = []
+# res1 = []
+#
+# for x, y, z in zip(abscissas, ordinates, applicates):
+#     res.append(x**2 + y**2 + z**2 <= r**2)
+#     res1.append(x**2 + y**2 + z**2)
+#
+# print(all(res))
+
 '''Используя параллельную итерацию сразу по трем спискам countries, capitals и population выведите информацию о стране'''
 #
 # countries = ['Russia', 'USA', 'UK', 'Germany', 'France', 'India']
