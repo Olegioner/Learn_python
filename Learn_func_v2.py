@@ -1,7 +1,39 @@
+'''Хороший пароль по условиям этой задачи состоит как минимум из 7 символов, содержит хотя бы одну цифру,
+заглавную и строчную букву. Напишите программу со встроенной функцией any()
+для определения хорош ли введенный пароль'''
+
+# passwd = [el for el in list(input())]
+# answer  = []
+# answer.append(True) if len(passwd) >= 7 else answer.append(False)
+# answer.append(any(map(lambda x: x.isdigit(), passwd)))
+# answer.append(any(map(lambda x: x.islower(), passwd)))
+# answer.append(any(map(lambda x: x.isupper(), passwd)))
+#
+# print('YES') if all(answer) else print('NO')
+
+
+
+'''На вход программе подаются два натуральных числа a и b. Напишите программу
+для обнаружения всех целых чисел в диапазоне [a;b], которые делятся на каждую содержащуюся
+в них цифру без остатка.'''
+
+# list_num = [str(el) for el in range(int(input()), int(input())+1)]
+# list_num_res = []
+# for i in range(len(list_num)):
+#     flag = True
+#     for j in range(len(list_num[i])):
+#         if list_num[i][j] == '0':
+#             flag = False
+#             break
+#         if int(list_num[i]) % int(list_num[i][j]) != 0 and int(list_num[i][j]) != 0:
+#             flag = False
+#             break
+#     if flag:
+#         list_num_res.append(list_num[i])
+# print(*list_num_res)
 '''IP-адрес – уникальный числовой идентификатор устройства в компьютерной сети, работающей по протоколу TCP/IP.'''
 
-
-print(all(map(lambda x: x.isdigit() and 0 <= int(x) <= 255, input().split('.'))))
+# print(all(map(lambda x: x.isdigit() and 0 <= int(x) <= 255, input().split('.'))))
 
 '''На вход программе подаются три строки текста с вещественными числами, значениями абсцисс (x), ординат (y)
 и аппликат (z) точек трехмерного пространства. Напишите программу для проверки расположения всех точек с введенными
