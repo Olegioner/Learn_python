@@ -1,3 +1,19 @@
+'''Учитель Тимур проверял контрольные работы по математике в нескольких классах онлайн-школы
+BEEGEEK и решил убедиться, что в каждом классе есть хотя бы один отличник – ученик с оценкой
+5 по контрольной работе.'''
+
+# count_class = int(input())
+# list_class = []
+# for _ in range(count_class):
+#     dict_l = {}
+#     for _ in range(int(input())):
+#         k,v = input().split()
+#         dict_l[k] = int(v)
+#     list_class.append(dict_l)
+# list_answer = [any(map(lambda x: list_class[i][x] == 5, list_class[i])) for i in range(len(list_class))]
+# print('YES') if all(list_answer) else print('NO')
+
+
 '''Хороший пароль по условиям этой задачи состоит как минимум из 7 символов, содержит хотя бы одну цифру,
 заглавную и строчную букву. Напишите программу со встроенной функцией any()
 для определения хорош ли введенный пароль'''
