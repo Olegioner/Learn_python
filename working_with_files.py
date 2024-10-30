@@ -1,4 +1,16 @@
+'''Напишите программу для записи содержимого этого файла в файл output.txt в виде нумерованного списка,
+где перед каждой строкой стоит ее номер, символ) и пробел. Нумерация строк должна начинаться с 1.'''
+# with open('C:/new/input.txt', 'r', encoding='utf-8') as input_file, open('C:/new/output.txt', 'w', encoding='utf-8') as output:
+#     input_data = input_file.readlines()
+#     for i in range(len(input_data)):
+#         print(f'{i+1})', input_data[i], end='', file = output)
 
+'''Напишите программу, записывающую в текстовый файл random.txt 25 случайных чисел в диапазоне
+от 111 до 777 (включительно), каждое с новой строки.'''
+# from random import randint
+# with open('random.txt', 'w', encoding='utf-8') as random:
+#     for i in range(25):
+#         print(randint(111, 777), file = random)
 
 '''Вам доступен CSV-файл data.csv, содержащий информацию в csv формате. Напишите функцию read_csv для чтения данных из этого файла.
 Она должна возвращать список словарей, интерпретируя первую строку как имена ключей, а каждую последующую строку как значения этих ключей'''
