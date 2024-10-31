@@ -1,3 +1,59 @@
+'''Напишите программу, которая создает файл output.txt и выводит в него имена всех пользователей
+(не меняя порядка следования), которые были в сети не менее часа'''
+
+# with open('C:/new/logfile.txt', 'r', encoding='utf-8') as logfile:
+#     log_list = [[el.strip() for el in row.split(',')] for row in logfile.readlines()]
+# list_user = []
+# for el in log_list:
+#     if ((int(el[2][:2]) * 60 + int(el[2][3:])) - (int(el[1][:2]) * 60 + int(el[1][3:]))) >= 60:
+#         list_user.append(el[0])
+#
+# with open('C:/new/output.txt', 'w', encoding='utf-8') as output:
+#     print(*list_user, sep='\n', file=output)
+
+'''На вход программе подается натуральное число n и n строк с названиями файлов.
+Напишите программу, которая создает файл output.txt и выводит в него содержимое всех файлов, не меняя их порядка'''
+# count_file = int(input())
+# file_list = [input() for _ in range(count_file)]
+# content_from_files = ''
+# for i in range(count_file):
+#     content_from_files += open(file_list[i], 'r', encoding='utf-8').read()
+# with open('C:/new/output.txt', 'w', encoding='utf-8') as output:
+#     print(content_from_files, file=output)
+
+
+'''Напишите программу создания файла answer.txt и вывода в него списка козлов,
+которые удовлетворяют условию загадки от Жака Фреско.'''
+
+# with open('C:/new/goats.txt', 'r', encoding='utf-8') as goats:
+#     goats_list = [row for row in goats.read().split('\n')]
+# ind_goats = goats_list.index('GOATS')
+# color_goats = goats_list[1:ind_goats]
+# count_goats = goats_list[ind_goats+1:]
+# dict_goats = {}
+# for el in color_goats:
+#     dict_goats[el] = 0
+# for el in count_goats:
+#     dict_goats[el] += 1
+# sm_goats = 0
+# for v in dict_goats.values():
+#     sm_goats += v
+# fresko_answer = []
+# for k,v in dict_goats.items():
+#     if v/sm_goats> 0.07:
+#         fresko_answer.append(k)
+# with open('C:/new/answer.txt', 'w', encoding='utf-8') as answer:
+#     print(*fresko_answer, sep='\n', file=answer)
+
+'''Напишите программу для добавления 5 баллов к каждому результату теста
+и вывода фамилий и новых результатов тестов в файл new_scores.txt.'''
+
+# with open('C:/new/class_scores.txt', 'r', encoding='utf-8') as class_scores, open('C:/new/new_scores.txt', 'w', encoding='utf-8') as new_scores:
+#     old_scores = [[int(el) if el.isdigit() else el for el in row.split()] for row in class_scores.readlines()]
+#     class_scores_new = list(map(lambda x: [x[0], x[1] + 5] if x[1] + 5 < 100 else [x[0], 100], old_scores))
+#     for el in class_scores_new:
+#         print(*el, file=new_scores)
+
 '''Напишите программу для записи содержимого этого файла в файл output.txt в виде нумерованного списка,
 где перед каждой строкой стоит ее номер, символ) и пробел. Нумерация строк должна начинаться с 1.'''
 # with open('C:/new/input.txt', 'r', encoding='utf-8') as input_file, open('C:/new/output.txt', 'w', encoding='utf-8') as output:
