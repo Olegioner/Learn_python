@@ -1,3 +1,104 @@
+'''На вход программе подается строка текста с именем существующего текстового файла,
+в котором необходимо заменить запрещенные слова звездочками.'''
+# file = 'C:/new/data (1).txt'
+# with open('C:/new/forbidden_words.txt', 'r', encoding='utf-8') as forbidden:
+#     bad_words = [el.strip() for el in forbidden.read().split()]
+#
+# with open(file, 'r', encoding='utf-8') as text:
+#     text_this = text.read()
+# text_low = text_this.lower()
+# for el in bad_words:
+#     text_low = text_low.replace(el, len(el)*'*')
+#
+# res_test = ''
+# for i in range(len(text_this)):
+#     if text_this[i].lower() != text_low[i]:
+#         res_test += text_low[i]
+#     else:
+#         res_test += text_this[i]
+#
+# print(res_test)
+
+'''Все функции без комментов'''
+# file = 'C:/new/func.txt'
+# with open(file, 'r', encoding='utf-8') as code:
+#     code_list = [[el.strip() for el in row.split()] for row in code.readlines()]
+# code_list_clean = []
+# for el in code_list:
+#     if el != []:
+#         code_list_clean.append(el)
+# count = 0
+# for i in range(len(code_list_clean)):
+#     if code_list_clean[i][0] == 'def' and code_list_clean[i-1][0] != '#':
+#         print(code_list_clean[i][1][:code_list_clean[i][1].index('(')])
+#         count += 1
+# if count == 0:
+#     print('Best Programming Team')
+
+
+'''Транслитерация '''
+# d = {
+#     'а': 'a', 'к': 'k', 'х': 'h', 'б': 'b', 'л': 'l', 'ц': 'c', 'в': 'v', 'м': 'm', 'ч': 'ch',
+#     'г': 'g', 'н': 'n', 'ш': 'sh', 'д': 'd', 'о': 'o', 'щ': 'shh', 'е': 'e', 'п': 'p', 'ъ': '*',
+#     'ё': 'jo', 'р': 'r', 'ы': 'y', 'ж': 'zh', 'с': 's', 'ь': "'", 'з': 'z', 'т': 't', 'э': 'je',
+#     'и': 'i', 'у': 'u', 'ю': 'ju', 'й': 'j', 'ф': 'f', 'я': 'ya'
+#     }
+# d.update({k.upper(): v.capitalize() for k, v in d.items()})
+# translator = str.maketrans(d)
+# with open('C:/new/cyrillic.txt', 'r', encoding='utf-8') as text_cyrill:
+#     words = text_cyrill.read()
+#     transliterated_text = words.translate(translator)
+# with open('C:/new/transliteration.txt', 'w', encoding='utf-8') as tran_text:
+#     print(transliterated_text, file=tran_text)
+
+
+
+'''На вход программе подается строка текста с именем текстового файла. Напишите программу,
+выводящую на экран последние 10 строк данного файла.'''
+#
+# with open(input(), 'r', encoding='utf-8') as text:
+#     text_list = [el.strip() for el in text.readlines()]
+#     if len(text_list) > 10:
+#         print(*text_list[-10:], sep='\n')
+#     else:
+#         print(*text_list, sep='\n')
+
+
+
+'''Вам доступен текстовый файл words.txt со словами, разделенными пробелом.
+Напишите программу, которая находит и выводит самые длинные слова этого файла, не меняя порядка их следования'''
+
+# with open('C:/new/words.txt', 'r', encoding='utf-8') as words:
+#     words_list = [el.strip() for el in words.read().split()]
+# sort_words_list = sorted(words_list, key=lambda x: len(x))
+# for el in words_list:
+#     if len(el) == len(sort_words_list[-1]):
+#         print(el)
+
+'''Напишите программу для подсчета количества студентов, сдавших все три теста.
+Тест считается сданным, если количество баллов по нему не меньше 65.'''
+# with open('C:/new/grades.txt', 'r', encoding='utf-8') as grades:
+#     grades_list = [[(int(el)) if el.isdigit() else el for el in row.split()] for row in grades.readlines()]
+# res = 0
+# for el in grades_list:
+#     count = 0
+#     for i in range(1, len(el)):
+#         if el[i] >= 65:
+#             count += 1
+#     if count == 3:
+#         res += 1
+# print(res)
+
+
+
+'''Напишите программу для подсчета суммарной месячной выручки фирмы. '''
+# with open('C:/new/ledger.txt', 'r', encoding='utf-8') as ledger:
+#     ledger_list = [int(el.strip('$')) for el in ledger.read().split()]
+#     sm = 0
+#     for el in ledger_list:
+#         sm+= el
+#     print(f'{sm}$')
+
 '''Напишите программу, которая создает файл output.txt и выводит в него имена всех пользователей
 (не меняя порядка следования), которые были в сети не менее часа'''
 
