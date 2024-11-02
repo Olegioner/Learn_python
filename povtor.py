@@ -1,3 +1,24 @@
+'''Task12'''
+m1, m2, step_between_m = int(input()),int(input()),int(input())
+res = 0
+short_step = min(m1, m2)
+long_step = max(m1, m2)
+# Пришел в первый магаз
+res+= short_step
+# Выбор куда идти дальше
+if step_between_m > short_step + long_step:
+    res += short_step + long_step
+else:
+    res += step_between_m
+# Пришли во второй магаз
+if step_between_m * 2 + short_step * 2 < long_step:
+    res += step_between_m * 2 + short_step
+else:
+    res += long_step
+
+print(res)
+
+
 '''Task11'''
 # def get_biggest(numbers):
 #     if len(numbers) == 0:
