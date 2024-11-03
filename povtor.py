@@ -1,22 +1,67 @@
-'''Task12'''
-m1, m2, step_between_m = int(input()),int(input()),int(input())
-res = 0
-short_step = min(m1, m2)
-long_step = max(m1, m2)
-# Пришел в первый магаз
-res+= short_step
-# Выбор куда идти дальше
-if step_between_m > short_step + long_step:
-    res += short_step + long_step
-else:
-    res += step_between_m
-# Пришли во второй магаз
-if step_between_m * 2 + short_step * 2 < long_step:
-    res += step_between_m * 2 + short_step
-else:
-    res += long_step
+'''Task17'''
+# list_language = [[el for el in input().split(', ')] for _ in range(int(input()))]
+# need_language = []
+# count = 1
+# for el in list_language[0]:
+#     for i in list_language[1:]:
+#         if el in i:
+#             count += 1
+#     if count == len(list_language):
+#         need_language.append(el)
+#     count = 1
+# print(', '.join(sorted(need_language))) if len(need_language) != 0 else print('Сериал снять не удастся')
+'''Task16'''
+# nums = [int(el)  for el in range(1, int(input())+1)]
+# dict_nums = {}
+# for el in nums:
+#     res = sum([int(i) for i in list(str(el))])
+#     if dict_nums.get(res, False):
+#         dict_nums[res].append(el)
+#     else:
+#         dict_nums[res] = [el]
+#
+# print(len(max(dict_nums.values(), key=lambda x: len(x))))
+'''Task15'''
+# num = [int(el) for el in input().split()]
+# num_res = set()
+# for el in num:
+#     if num.count(el) > 1:
+#         num_res.add(el)
+#
+# print(*sorted(num_res))
+'''Task14'''
+# n, x, y, a, b = input().split()
+# n, x, y, a, b = int(n), int(x)-1, int(y)-1, int(a)-1, int(b)-1
+# nums = [el for el in range(1, n+1)]
+# nums = nums[:x] + nums[x:y+1][::-1] + nums[y+1:]
+# nums = nums[:a] + nums[a:b+1][::-1] + nums[b+1:]
+# print(*nums)
 
-print(res)
+'''Task13'''
+# en = 'AaBCcEeHKMOoPpTXxy'
+# ru = 'АаВСсЕеНКМОоРрТХху'
+# letter_list = list(map(lambda x: 'ru' if x in ru else 'en',[input() for _ in range(3)]))
+# set_list = set(el for el in letter_list)
+# print(*set_list) if len(set_list) == 1 else print('mix')
+
+'''Task12'''
+# m1, m2, step_between_m = int(input()),int(input()),int(input())
+# res = 0
+# short_step = min(m1, m2)
+# long_step = max(m1, m2)
+# # Пришел в первый магаз
+# res+= short_step
+# # Идем во второй магаз
+# if step_between_m > short_step + long_step:
+#     res += short_step + long_step
+# else:
+#     res += step_between_m
+# # Идем домой
+# if step_between_m + short_step < long_step:
+#     res += step_between_m + short_step
+# else:
+#     res += long_step
+# print(res)
 
 
 '''Task11'''
