@@ -1,24 +1,22 @@
 '''Task18'''
-letter_vow = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е']
-letter_cons = ['б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ']
-word = [el for el in list(input())]
+# letter_vow = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е']
+#
+# word = [el for el in list(input())]
 # words = [[el for el in list(input())] for _ in range(int(input()))]
-word_vow = []
-# list(map(lambda x: word.index(x) if x in letter_vow else '', word))
-for i in range(len(word)):
-    print(word[i:])
-    if word[i] in letter_vow:
-        word_vow.append(word[i:].index(word[i]))
-
-        # print(word[i:])
-
-print()
-print(word_vow)
-# word_r = ''.join(map(lambda x: '1' if x in letter_vow else '0', list(word)))
+#
+# word_vow = []
+# for i in range(len(word)):
+#     if word[i] in letter_vow:
+#         word_vow.append(i)
+#
 # for el in words:
-#     el_r = ''.join(map(lambda x: '1' if x in letter_vow else '0', list(el)))
-#     if word_r == el_r:
-#         print(el)
+#     words_vow = []
+#     for i in range(len(el)):
+#         if el[i] in letter_vow:
+#             words_vow.append(i)
+#     if words_vow == word_vow:
+#         print(''.join(el))
+
 '''Task17'''
 # list_language = [[el for el in input().split(', ')] for _ in range(int(input()))]
 # need_language = []
