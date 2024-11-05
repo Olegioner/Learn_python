@@ -1,3 +1,63 @@
+'''Task20'''
+# with open('C:/new/file.txt', 'r', encoding='utf-8') as file:
+#     file_list = [[el.strip() for el in row.split()] for row in file.readlines()]
+# file_list = list(map(lambda x: list(map(lambda el: int(el) if el.isdigit() else el, x)), file_list))
+#
+# file_list = sorted(file_list, key=lambda x: x[0])
+#
+# dict_file = {}
+# for el in file_list:
+#     if dict_file.get(el[0][el[0].index('.'):], False):
+#         dict_file[el[0][el[0].index('.'):]].append(el)
+#     else:
+#         dict_file[el[0][el[0].index('.'):]] = [el]
+# dict_file = dict(sorted(dict_file.items()))
+#
+# for v in dict_file.values():
+#     sm = 0
+#     for el in v:
+#         if el[2] == 'B':
+#             sm += el[1]/1024/1024/1024
+#         if el[2] == 'KB':
+#             sm += el[1]/1024/1024
+#         if el[2] == 'MB':
+#             sm += el[1]/1024
+#         if el[2] == 'GB':
+#             sm += el[1]
+#         print(el[0])
+#     cnt = 0
+#     while sm < 1:
+#         sm *= 1024
+#         cnt += 1
+#     ed = 'GB'
+#     if cnt == 1:
+#         ed = 'MB'
+#     if cnt == 2:
+#         ed = 'KB'
+#     if cnt == 3:
+#         ed = 'B'
+#
+#     print('----------')
+#     print(f'Summary: {round(sm)} {ed}')
+#     print()
+
+
+'''Task19'''
+# digits, names = '0123456789', []
+#
+# for _ in range(int(input())):
+#     name, _ = input().split('@')
+#     names.append(name)
+# for _ in range(int(input())):
+#     name = input()
+#     counter = 1
+#     while name in names:
+#         name = name.rstrip(digits) + str(counter)
+#         counter += 1
+#     names.append(name)
+#     print(names)
+#     print(f'{name}@beegeek.bzz')
+
 '''Task18'''
 # letter_vow = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е']
 #
