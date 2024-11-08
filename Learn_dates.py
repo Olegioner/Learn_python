@@ -1,3 +1,14 @@
+'''Task 17'''
+
+'''Task 16'''
+# from datetime import datetime, timedelta
+# cur_date = datetime.strptime(input(), '%d.%m.%Y')
+# print(cur_date.strftime('%d.%m.%Y'))
+# for i in range(10):
+#     day_task = cur_date + timedelta(days=i+2)
+#     cur_date = day_task
+#     print(day_task.strftime('%d.%m.%Y'))
+
 '''Task 15'''
 # from datetime import timedelta, datetime
 # def num_of_sundays(year):
