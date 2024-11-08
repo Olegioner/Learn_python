@@ -1,5 +1,31 @@
-'''Task 13'''
+'''Task 15'''
+# from datetime import timedelta, datetime
+# def num_of_sundays(year):
+#     first_day = datetime(year, 1,1).toordinal()
+#     last_day = datetime(year, 12, 31).toordinal()
+#     cnt = 0
+#     for i in range(first_day, last_day+1):
+#         if datetime.fromordinal(i).weekday() == 6:
+#             cnt += 1
+#     return cnt
 
+'''Task 14'''
+# from datetime import timedelta, time
+#
+# td = [int(el) for el in input().split(':')]
+# cur_time = timedelta(hours=td[0], minutes=td[1], seconds=td[-1])
+# after_timer = cur_time + timedelta(seconds=int(input()))
+# seconds = after_timer.seconds
+# a = time(seconds % 86400 // 3600, seconds % 3600 // 60, seconds % 60 // 1)
+# print(a)
+
+
+'''Task 13'''
+# from datetime import datetime
+#
+# cur_date = datetime.strptime(input(), '%d.%m.%Y').toordinal()
+# print((datetime.fromordinal(cur_date - 1)).strftime('%d.%m.%Y'))
+# print((datetime.fromordinal(cur_date + 1)).strftime('%d.%m.%Y'))
 
 '''Task 12'''
 # from datetime import datetime
