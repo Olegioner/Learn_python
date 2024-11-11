@@ -1,5 +1,90 @@
-'''Task 17'''
+'''Task 22'''
+from datetime import datetime, timedelta
+import locale
+from turtledemo.penrose import start
 
+locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
+dict_work = {'понедельник': (timedelta(hours=9), timedelta(hours=21)),
+             'вторник': (timedelta(hours=9), timedelta(hours=21)),
+             'среда': (timedelta(hours=9), timedelta(hours=21)),
+             'четверг': (timedelta(hours=9), timedelta(hours=21)),
+             'пятница': (timedelta(hours=9), timedelta(hours=21)),
+             'суббота': (timedelta(hours=10), timedelta(hours=18)),
+             'воскресенье': (timedelta(hours=10), timedelta(hours=18)) }
+cur_date = datetime.strptime(input(), '%d.%m.%Y %H:%M')
+n = dict_work[cur_date.strftime('%A')][0].seconds // 3600
+k = dict_work[cur_date.strftime('%A')][1].seconds // 3600
+if n <= cur_date.hour < k:
+
+print(n)
+
+
+
+'''Task 21'''
+# from datetime import datetime, timedelta
+#
+# start = datetime(1, 1,13)
+# stop = datetime(9999,12,31)
+# dict_13 = {}
+# for i in range(1, 10000):
+#     for j in range(1, 13):
+#         dict_13[datetime(i,j,13).isoweekday()] = dict_13.get(datetime(i,j,13).isoweekday(), 0) + 1
+#
+# for k in sorted(dict_13.keys()):
+#     print(dict_13[k])
+'''Task 20'''
+# from datetime import date, time, datetime, timedelta
+#
+# data = [('07:14', '08:46'),
+#         ('09:01', '09:37'),
+#         ('10:00', '11:43'),
+#         ('12:13', '13:49'),
+#         ('15:00', '15:19'),
+#         ('15:58', '17:24'),
+#         ('17:57', '19:21'),
+#         ('19:30', '19:59')]
+# p = "%H:%M"
+# sum_minutes = timedelta(seconds=0)
+# for el in data:
+#     n = datetime.strptime(el[0], p)
+#     k = datetime.strptime(el[1], p)
+#     sum_minutes += k - n
+# print(sum_minutes.seconds // 60)
+'''Task 19'''
+
+# from datetime import timedelta, datetime
+# start = datetime.strptime(input(), "%H:%M")
+# stop = datetime.strptime(input(), "%H:%M")
+# while stop > start:
+#     cur = start + timedelta(minutes=45)
+#     if cur > stop:
+#         break
+#     print(f'{start.strftime("%H:%M")} - {cur.strftime("%H:%M")}')
+#     start = cur + timedelta(minutes=10)
+
+'''Task 18'''
+# from datetime import datetime, timedelta
+# def fill_up_missing_dates(dates):
+#     dates_list= sorted(map(lambda x: datetime.strptime(x, '%d.%m.%Y'), dates))
+#     dates_sets = set()
+#     for i in range(1, len(dates_list)):
+#         cnt_day = (dates_list[i] - dates_list[i-1]).days
+#         dates_sets.add(dates_list[i-1])
+#         for d in range(1, cnt_day+1):
+#             dates_sets.add(dates_list[i-1] + timedelta(days=d))
+#     return  sorted(map(lambda x: x.strftime('%d.%m.%Y'), dates_sets))
+
+# dates = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
+# print(fill_up_missing_dates(dates))
+
+#Вывод['01.11.2021', '02.11.2021', '03.11.2021', '04.11.2021', '05.11.2021', '06.11.2021', '07.11.2021']
+'''Task 17'''
+# from datetime import datetime, timedelta
+# date_list = [datetime.strptime(el, '%d.%m.%Y') for el in input().split()]
+# days_list = []
+# for i in range(1,len(date_list)):
+#     days_list.append(abs(date_list[i-1] - date_list[i]).days)
+# print(days_list)
 '''Task 16'''
 # from datetime import datetime, timedelta
 # cur_date = datetime.strptime(input(), '%d.%m.%Y')
