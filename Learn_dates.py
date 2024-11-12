@@ -1,24 +1,39 @@
+'''Task 23'''
+# from datetime import datetime, timedelta
+# p = '%d.%m.%Y'
+# start = datetime.strptime(input(), p)
+# end = datetime.strptime(input(), p)
+# date_list = []
+#
+# while start < end :
+#     if (start.day + start.month) % 2 != 0:
+#         break
+#     start += timedelta(days=1)
+#
+#
+# while start <= end:
+#     if (start.weekday() != 0) and (start.weekday() != 3):
+#         date_list.append(start)
+#     start += timedelta(days=3)
+#
+# for d in date_list:
+#     print(d.strftime(p))
+
+
 '''Task 22'''
-from datetime import datetime, timedelta
-import locale
-from turtledemo.penrose import start
-
-locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
-dict_work = {'понедельник': (timedelta(hours=9), timedelta(hours=21)),
-             'вторник': (timedelta(hours=9), timedelta(hours=21)),
-             'среда': (timedelta(hours=9), timedelta(hours=21)),
-             'четверг': (timedelta(hours=9), timedelta(hours=21)),
-             'пятница': (timedelta(hours=9), timedelta(hours=21)),
-             'суббота': (timedelta(hours=10), timedelta(hours=18)),
-             'воскресенье': (timedelta(hours=10), timedelta(hours=18)) }
-cur_date = datetime.strptime(input(), '%d.%m.%Y %H:%M')
-n = dict_work[cur_date.strftime('%A')][0].seconds // 3600
-k = dict_work[cur_date.strftime('%A')][1].seconds // 3600
-if n <= cur_date.hour < k:
-
-print(n)
-
-
+# from datetime import datetime, timedelta
+#
+# dict_work = {'01234' : [9, 21], '56' :  [10, 18]}
+# cur_date = datetime.strptime(input(), '%d.%m.%Y %H:%M')
+# time_list = []
+# for k in dict_work.keys():
+#     if str(cur_date.weekday()) in k:
+#         time_list += dict_work[k]
+# if time_list[0] <= cur_date.hour < time_list[1]:
+#     m = timedelta(hours=time_list[1]) - timedelta(hours=cur_date.hour, minutes=cur_date.minute)
+#     print(int(m.total_seconds() // 60))
+# else:
+#     print('Магазин не работает')
 
 '''Task 21'''
 # from datetime import datetime, timedelta
