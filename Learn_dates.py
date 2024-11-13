@@ -1,4 +1,18 @@
-'''Task24'''
+'''Task 25'''
+'''Одинаковые даты'''
+# from datetime import datetime
+# p = '%d.%m.%Y'
+# date_dict = {}
+# for _ in range(int(input())):
+#     fn, ln, date = input().split()
+#     date_dict[datetime.strptime(date, p)] = date_dict.get(datetime.strptime(date, p), 0) + 1
+# list_more_date = sorted(list(filter(lambda x: date_dict[x] > 1, date_dict)))
+# if len(list_more_date) == 0:
+#     list_more_date =  sorted(date_dict.keys())
+# for el in list_more_date:
+#     print(el.strftime(p))
+
+'''Task 24'''
 '''Самые старые сотрудники'''
 # from datetime import datetime
 #
