@@ -1,3 +1,18 @@
+'''Task24'''
+'''Самые старые сотрудники'''
+# from datetime import datetime
+#
+# employer_dict = {}
+# for _ in range(int(input())):
+#     fn, ln, date = input().split()
+#     employer_dict[f'{fn} {ln}'] = datetime.strptime(date, '%d.%m.%Y')
+# mn = min(employer_dict, key=lambda x: employer_dict[x])
+# old_list = list(filter(lambda x: employer_dict[x] == employer_dict[mn], employer_dict))
+# if len(old_list) > 1:
+#     print(employer_dict[mn].strftime('%d.%m.%Y'), len(old_list))
+# else:
+#     print(employer_dict[mn].strftime('%d.%m.%Y'), mn)
+
 '''Task 23'''
 # from datetime import datetime, timedelta
 # p = '%d.%m.%Y'
