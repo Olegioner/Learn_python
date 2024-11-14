@@ -1,3 +1,18 @@
+'''Task 26'''
+'''Дни рождения в ближайшие 7 дней'''
+# from datetime import datetime, timedelta
+#
+# p = '%d.%m.%Y'
+# today = datetime.strptime(input(), p)
+# today_list = [(today + timedelta(days=i)).strftime('%d.%m') for i in range(1,8)]
+# employer_dict = {}
+# for _ in range(int(input())):
+#     fn, ln, date = input().split()
+#     employer_dict[f'{fn} {ln}'] = datetime.strptime(date, p)
+# birthday_list = list(filter(lambda x: employer_dict[x].strftime('%d.%m') in today_list, employer_dict))
+# young = sorted(birthday_list, key=lambda x: employer_dict[x])
+# print(young[-1]) if len(young) > 0 else print('Дни рождения не планируются')
+
 '''Task 25'''
 '''Одинаковые даты'''
 # from datetime import datetime
