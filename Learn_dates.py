@@ -1,3 +1,43 @@
+'''Task 27'''
+# from datetime import datetime
+# def choose_plural(amount, declensions):
+#     num = amount % 100
+#     num_last = int(str(num)[-1])
+#     if num == 11 or num == 12:
+#         return f'{amount} {declensions[2]}'
+#     elif num == 1 or num_last == 1:
+#         return f'{amount} {declensions[0]}'
+#     elif 2<= num < 5 or 2<= num_last < 5:
+#         return f'{amount} {declensions[1]}'
+#     else:
+#         return f'{amount} {declensions[2]}'
+#
+#
+# p = '%d.%m.%Y %H:%M'
+# final_day = datetime.strptime('08.11.2022 12:00', p)
+# today = datetime.strptime(input(), p)
+# if today > final_day or today == final_day:
+#     print('Курс уже вышел!')
+# total = final_day - today
+#
+# dmh = [['день','дня','дней'], ['час', 'часа', 'часов'],['минута','минуты','минут']]
+# day = choose_plural(total.days, dmh[0])
+# hour = choose_plural(total.seconds // 3600, dmh[1])
+# minute = choose_plural((total.seconds // 60) % 60, dmh[2])
+#
+# if total.days > 1:
+#     if total.seconds // 3600 == 0:
+#         print(f'До выхода курса осталось: {day}')
+#     else:
+#         print(f'До выхода курса осталось: {day} и {hour}')
+# elif total.days == 0:
+#     if  total.seconds // 3600 > 0 and (total.seconds // 60) % 60 > 0:
+#         print(f'До выхода курса осталось: {hour} и {minute}')
+#     if total.seconds // 3600 > 0 and (total.seconds // 60) % 60 == 0:
+#         print(f'До выхода курса осталось: {hour}')
+#     elif total.seconds // 3600 == 0 and (total.seconds // 60) % 60 > 0:
+#         print(f'До выхода курса осталось: {minute}')
+
 '''Task 26'''
 '''Дни рождения в ближайшие 7 дней'''
 # from datetime import datetime, timedelta
