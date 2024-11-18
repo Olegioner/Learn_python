@@ -1,3 +1,24 @@
+'''Task 29'''
+# import time
+# def get_the_fastest_func(funcs, arg):
+#     time_dict = {}
+#     for el in funcs:
+#         st = time.perf_counter()
+#         el(arg)
+#         end = time.perf_counter()
+#         time_dict[el] = end - st
+#     time_top = sorted(time_dict, key=lambda x: time_dict[x])
+#     return time_top[0]
+
+
+'''Task 28'''
+# import time
+# def calculate_it(func, *args):
+#     st = time.perf_counter()
+#     res = func(*args)
+#     end = time.perf_counter()
+#     res_time = end - st
+#     return res, res_time
 '''Task 27'''
 # from datetime import datetime
 # def choose_plural(amount, declensions):
