@@ -1,3 +1,31 @@
+'''Task 34'''
+
+
+'''Task 33'''
+# import calendar
+# cur_year, cur_month = map(int, input().split())
+# print((calendar.monthrange(cur_year, cur_month))[1])
+'''Task 32'''
+# import calendar
+# from datetime import datetime
+#
+# list_days = list(calendar.day_name)
+# cur_day = datetime.strptime(input(), '%Y-%m-%d')
+# print(list_days.pop(cur_day.weekday()))
+
+'''Task 31'''
+# import calendar
+# from calendar import month
+#
+# list_month = list(calendar.month_abbr)
+# cur_year, cur_month = input().split()
+# print(month(int(cur_year), list_month.index(cur_month)))
+
+'''Task 30'''
+# import calendar
+# year_list = [calendar.isleap(int(input())) for _ in range(int(input()))]
+# print(*year_list, sep='\n')
+
 '''Task 29'''
 # import time
 # def get_the_fastest_func(funcs, arg):
