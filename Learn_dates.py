@@ -1,5 +1,23 @@
-'''Task 34'''
+'''Task 35'''
+# import calendar
+# import datetime
+# from datetime import timedelta
+#
+# def get_days_in_month(year, month):
+#     list_month = list(calendar.month_name)
+#     num_month = list_month.index(month)
+#     start = datetime.date(year, num_month, 1)
+#     count_day = calendar.monthrange(year, num_month)[1]
+#     list_date = [start + timedelta(days=i) for i in range(count_day)]
+#     return list_date
+#
+# print(get_days_in_month(2005, 'February'))
 
+'''Task 34'''
+# import calendar
+# list_month = list(calendar.month_name)
+# y, m = input().split()
+# print((calendar.monthrange(int(y), list_month.index(m)))[1])
 
 '''Task 33'''
 # import calendar
