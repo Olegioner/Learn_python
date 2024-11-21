@@ -1,3 +1,37 @@
+'''Task 37'''
+# import datetime
+# import calendar
+#
+# year = int(input())
+# list_third_thursday = []
+# for i in range(1, 13):
+#     list_thursday_in_month = []
+#     for j in range(1, (calendar.monthrange(year, i))[1]+1):
+#         cur_day = datetime.date(year, i, j)
+#         if cur_day.weekday() == 3:
+#             list_thursday_in_month.append(cur_day)
+#     list_third_thursday.append(list_thursday_in_month[2])
+#
+# for el in list_third_thursday:
+#     print(el.strftime('%d.%m.%Y'))
+
+
+
+'''Task 36'''
+# import datetime
+# from datetime import timedelta
+#
+# def get_all_mondays(year):
+#     st = datetime.date(year, 1, 1)
+#     end = datetime.date(year, 12, 31)
+#     list_monday_in_year = []
+#     while st < end + timedelta(days=1):
+#         if st.weekday() == 0:
+#             list_monday_in_year.append(st)
+#         st += timedelta(days=1)
+#     return list_monday_in_year
+#
+# print(get_all_mondays(1353))
 '''Task 35'''
 # import calendar
 # import datetime
