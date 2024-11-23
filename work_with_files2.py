@@ -1,3 +1,19 @@
+
+'''Task3'''
+# import sys
+# step_list = [int(el) for el in sys.stdin]
+# win = []
+# for i in range(len(step_list)):
+#     if i % 2 == 0:
+#         win.append('Анри')
+#     else:
+#         win.append('Дима')
+# if step_list[-1] % 2 == 0:
+#     print(win[-1])
+# else:
+#     print(win[-2])
+
+
 '''Task2'''
 # import sys
 # from datetime import datetime
