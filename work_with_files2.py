@@ -1,4 +1,14 @@
-
+'''Task4'''
+# import sys
+# from functools import reduce
+# height_list = sorted([int(el.strip()) for el in sys.stdin])
+# if len(height_list) == 0:
+#     print('нет учеников')
+# else:
+#     average_height = reduce(lambda x, y: x + y, height_list) / len(height_list)
+#     print(f'Рост самого низкого ученика: {height_list[0]}')
+#     print(f'Рост самого высокого ученика: {height_list[-1]}')
+#     print(f'Средний рост: {average_height}')
 '''Task3'''
 # import sys
 # step_list = [int(el) for el in sys.stdin]
