@@ -1,3 +1,16 @@
+'''Task6'''
+# import sys
+# list_command = [el for el in sys.stdin]
+# list_comm = list(map(lambda x: '' if x.strip().startswith("#") else x, list_command))
+# for el in list_comm:
+#     print(el, end='')
+
+'''Task5'''
+# import sys
+# list_command = [el.strip() for el in sys.stdin]
+# list_comm = list(filter(lambda x: x[0] == '#', list_command))
+# print(len(list_comm))
+
 '''Task4'''
 # import sys
 # from functools import reduce
