@@ -1,3 +1,41 @@
+'''Task9'''
+# import sys
+# num_list = [int(i) for i in sys.stdin]
+# arf = set()
+# geom = set()
+# for i in range(1, len(num_list)):
+#     arf.add(num_list[i] - num_list[i-1])
+#     geom.add(num_list[i] / num_list[i - 1])
+# if len(arf) == 1:
+#     print('Арифметическая прогрессия')
+# elif len(geom) == 1:
+#     print('Геометрическая прогрессия')
+# else:
+#     print('Не прогрессия')
+
+
+'''Task8'''
+# import sys
+# from datetime import datetime
+# list_date = [datetime.strptime(el.strip(), '%d.%m.%Y') for el in sys.stdin]
+# dates = set(list_date)
+# sort = sorted(dates)
+# sort_reverse = sorted(dates, reverse=True)
+#if list_date == sort:
+#    print('ASC')
+#elif list_date == sort_reverse:
+#    print('DESC')
+#else:
+#    print('MIX')
+
+'''Task7'''
+# import sys
+# list_news = [[el.strip() for el in row.split(' / ')]for row in sys.stdin]
+# tag = ''.join(list_news.pop(-1))
+# news = list(filter(lambda x: x[1] == tag, list_news))
+# s_news = sorted(sorted(news, key=lambda x: x[0][0]), key=lambda x: float(x[2]))
+# for el in s_news:
+#     print(el[0])
 '''Task6'''
 # import sys
 # list_command = [el for el in sys.stdin]
