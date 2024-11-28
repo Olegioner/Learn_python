@@ -1,3 +1,39 @@
+'''Task12'''
+# import csv
+# n = int(input())
+# with open('C:/new/deniro.csv', 'r', encoding='utf-8') as file:
+#     columns = csv.reader(file, delimiter=',')
+#     for el in sorted(columns, key=lambda x: int(x[n-1]) if x[n-1].isdigit() else x[n-1]):
+#         print(','.join(el))
+
+'''Task11'''
+# import csv
+#
+# with open('C:/new/salary_data.csv', 'r', encoding='utf-8') as file:
+#     fork = csv.reader(file,delimiter=';')
+#     next(fork)
+#     dict_company = {}
+#
+#     for k, v in fork:
+#         if dict_company.get(k):
+#             dict_company[k].append(int(v))
+#         else:
+#             dict_company[k] = [int(v)]
+#
+# for k in dict_company.keys():
+#     dict_company[k] = round(sum(dict_company[k]) / len(dict_company[k]), 0)
+#
+# for el in sorted(sorted(dict_company.items()), key=lambda x: x[1]):
+#     print(el[0])
+
+'''Task10'''
+#import csv
+#
+# with open('C:/new/sales.csv', 'r', encoding='utf-8') as file:
+#     sale = csv.DictReader(file, delimiter=';')
+#     for row in sale:
+#         if int(row['old_price']) > int(row['new_price']):
+#             print(row['name'])
 '''Task9'''
 # import sys
 # num_list = [int(i) for i in sys.stdin]
