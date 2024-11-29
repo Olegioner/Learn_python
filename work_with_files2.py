@@ -1,3 +1,19 @@
+'''Task13'''
+# import csv
+# def csv_columns(filename):
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         data = csv.DictReader(file, delimiter=',')
+#         dict_data = {}
+#         for el in data:
+#             for k,v in el.items():
+#                 if dict_data.get(k):
+#                     dict_data[k].append(v)
+#                 else:
+#                     dict_data[k] = [v]
+#
+#     return dict_data
+#
+# print(csv_columns('C:/new/deniro.csv'))
 '''Task12'''
 # import csv
 # n = int(input())
