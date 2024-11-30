@@ -1,3 +1,23 @@
+'''Task14'''
+# import csv
+# with open('C:/new/data.csv', 'r', encoding='utf-8') as file:
+#     emails = csv.DictReader(file, delimiter=',')
+#     email_list = []
+#     for el in emails:
+#         for k in el.keys():
+#             if k == 'email':
+#                 email_list.append(el[k])
+#     dict_email = {}
+#     for el in email_list:
+#         dict_email[el[el.index('@')+1:]] = dict_email.get(el[el.index('@')+1:], 0) + 1
+#     dict_email = sorted(sorted(dict_email.items()), key = lambda x: x[1])
+# with open('C:/new/domain_usage.csv', 'w', encoding = 'utf-8') as output:
+#     email_output = csv.DictWriter(output, fieldnames = ['domain', 'count'])
+#     email_output.writeheader()
+#     for k,v in dict_email:
+#         email_output.writerow({'domain':k,'count':v})
+
+
 '''Task13'''
 # import csv
 # def csv_columns(filename):
