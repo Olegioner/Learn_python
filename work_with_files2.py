@@ -1,3 +1,17 @@
+'''Task15'''
+# import csv
+# with open('C:/new/wifi.csv', 'r', encoding='utf-8') as file:
+#     wifi = csv.reader(file, delimiter=';')
+#     next(wifi)
+#     dict_wifi = {}
+#     for el in wifi:
+#         if dict_wifi.get(el[1]):
+#             dict_wifi[el[1]] += int(el[-1])
+#         else:
+#             dict_wifi[el[1]] = int(el[-1])
+#     dict_wifi = sorted(sorted(dict_wifi.items()), key = lambda x: x[1], reverse=True)
+#     for el in dict_wifi:
+#         print(f'{el[0]}: {el[1]}')
 '''Task14'''
 # import csv
 # with open('C:/new/data.csv', 'r', encoding='utf-8') as file:
