@@ -1,3 +1,13 @@
+'''Task16'''
+# import csv
+# with open('C:/new/titanic.csv', 'r', encoding='utf') as file:
+#     passengers = csv.reader(file, delimiter=';')
+#     next(passengers)
+#     survivors_list = sorted(filter(lambda x: x[0] == '1', passengers), key=lambda x: x[2], reverse=True)
+#     young_survivors = filter(lambda x: float(x[-1]) < 18, survivors_list)
+#     for el in young_survivors:
+#         print(el[1])
+
 '''Task15'''
 # import csv
 # with open('C:/new/wifi.csv', 'r', encoding='utf-8') as file:
