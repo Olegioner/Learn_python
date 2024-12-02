@@ -1,3 +1,21 @@
+'''Task17'''
+# import csv
+# from datetime import datetime
+#
+# with open('C:/new/name_log.csv', 'r', encoding='utf-8') as file:
+#     log = list(csv.reader(file, delimiter=','))
+#     head_names = log.pop(0)
+#     sorted_log = sorted(log, key=lambda x: datetime.strptime(x[-1], '%d/%m/%Y %H:%M'))
+#
+# dict_log = {el[1] : el for el in sorted_log}
+# new_log = sorted(dict_log.values(), key=lambda x: x[1])
+#
+# with open('C:/new/new_name_log.csv' , 'w', encoding='utf-8') as output:
+#     log_output = csv.DictWriter(output, fieldnames=head_names)
+#     log_output.writeheader()
+#     for el in new_log:
+#         log_output.writerow(dict(zip(head_names, el)))
+
 '''Task16'''
 # import csv
 # with open('C:/new/titanic.csv', 'r', encoding='utf') as file:
