@@ -1,3 +1,43 @@
+'''Task19'''
+# import csv
+# with (open('C:/new/student_counts.csv', 'r', encoding='utf-8') as file,
+#       open('C:/new/sorted_student_counts.csv', 'w') as output):
+#     stud = csv.DictReader(file, delimiter=',')
+#     year_list = []
+#     for el in stud:
+#         el = dict(sorted(el.items(), key=lambda x: x[0][-1]))
+#         el = dict(sorted(el.items(), key=lambda x: int(x[0][:x[0].index('-')]) if x[0] != 'year' else 1))
+#         year_list.append(el)
+#
+#     stud_writer = csv.DictWriter(output, delimiter=',', fieldnames=year_list[0].keys())
+#     stud_writer.writeheader()
+#     for el in year_list:
+#         stud_writer.writerow(el)
+
+'''Task18'''
+# import csv
+#
+# def condense_csv(filename, id_name):
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         data = [[el.strip() for el in row.split(',')] for row in file.readlines()]
+#     dict_data = {}
+#     header_list = []
+#     for el in data:
+#         obj, key, value = el
+#         if obj not in dict_data:
+#             dict_data[obj] = {id_name: obj}
+#         dict_data[obj][key] = value
+#     for el in dict_data.values():
+#        header_list.extend(el)
+#        break
+#
+#     with open('C:/new/condensed.csv', 'w', encoding='utf-8') as output:
+#         writer = csv.DictWriter(output, delimiter=',', fieldnames=header_list)
+#         writer.writeheader()
+#         for el in dict_data.values():
+#             writer.writerow(el)
+
+
 '''Task17'''
 # import csv
 # from datetime import datetime
