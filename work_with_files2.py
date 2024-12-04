@@ -1,3 +1,37 @@
+'''Task22'''
+import json
+with open('C:/new/data.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
+list_data = []
+for el in data:
+    if type(el) == str:
+        list_data.append(el + '!')
+    if type(el) == int:
+        list_data.append(el + 1)
+    if type(el) == bool:
+        list_data.append(not el)
+    if type(el) == list:
+        list_data.append(el + el)
+    if type(el) == dict:
+        el.setdefault("newkey", None)
+        list_data.append(el)
+with open('C:/new/updated_data.json', 'w', encoding='utf-8') as output:
+    json.dump(list_data, output)
+
+
+'''Task21'''
+# import sys
+# import json
+#
+# json_list = ''.join([el for el in sys.stdin])
+# json_dict = json.loads(json_list)
+# for key, value in json_dict.items():
+#     if type(value) == list:
+#         print(f'{key}: {", ".join(str(el) for el in value])}')
+#     else:
+#         print(f'{key}: {value}')
+
+
 '''Task20'''
 # import csv
 # with open('C:/new/prices.csv', 'r', encoding='utf-8') as file:
