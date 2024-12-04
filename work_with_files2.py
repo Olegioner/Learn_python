@@ -1,3 +1,21 @@
+'''Task20'''
+# import csv
+# with open('C:/new/prices.csv', 'r', encoding='utf-8') as file:
+#     prices = csv.DictReader(file, delimiter=';')
+#     dict_low_prices = {}
+#     for el in prices:
+#         dict_low_prices[el['Магазин']] = min(el.items(), key = lambda x: int(x[1]) if x[1].isdigit() else 999)
+#     low_price = (min(dict_low_prices.values(), key = lambda x: int(x[1])))[1]
+#
+#     list_low_price = {}
+#     for key, value in dict_low_prices.items():
+#         if value[1] == low_price:
+#             list_low_price[key] = value[0]
+#
+#     list_low_price = sorted(sorted(list_low_price.items(), key = lambda x: x[1]), key = lambda x: x[0])
+#     print(f'{list_low_price[-1][1]}: {list_low_price[-1][0]}')
+
+
 '''Task19'''
 # import csv
 # with (open('C:/new/student_counts.csv', 'r', encoding='utf-8') as file,
