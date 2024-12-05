@@ -1,22 +1,63 @@
+'''Task25'''
+# import json
+# with open('C:/new/countries.json', 'r', encoding='utf-8') as file:
+#     countries = json.load(file)
+#     religions_dict = {}
+#     for country in countries:
+#         key = country['religion']
+#         value = country['country']
+#         if religions_dict.get(key):
+#             religions_dict[key].append(value)
+#         else:
+#             religions_dict[key] = [value]
+# with open('C:/new/religion.json', 'w', encoding='utf-8') as output:
+#     json.dump(religions_dict, output)
+
+'''Task24'''
+# import json
+# with open('C:/new/people.json', 'r', encoding='utf-8') as file:
+#     people = json.load(file)
+#     key_list = []
+#     for person in people:
+#         for key in person.keys():
+#             if key not in key_list:
+#                 key_list.append(key)
+#     for person in people:
+#         for key in key_list:
+#             if key not in person:
+#                 person.setdefault(key, None)
+# with open('C:/new/updated_people.json', 'w', encoding='utf-8') as output:
+#     json.dump(people, output)
+
+
+'''Task23'''
+# import json
+# with (open('C:/new/data1.json', 'r', encoding='utf-8') as data1,
+#       open('C:/new/data2.json', 'r', encoding='utf-8') as data2):
+#     data_dict = json.load(data1)
+#     data_dict.update(json.load(data2))
+# with open('C:/new/data_merge.json', 'w', encoding='utf-8') as output:
+#     json.dump(data_dict, output)
+
 '''Task22'''
-import json
-with open('C:/new/data.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
-list_data = []
-for el in data:
-    if type(el) == str:
-        list_data.append(el + '!')
-    if type(el) == int:
-        list_data.append(el + 1)
-    if type(el) == bool:
-        list_data.append(not el)
-    if type(el) == list:
-        list_data.append(el + el)
-    if type(el) == dict:
-        el.setdefault("newkey", None)
-        list_data.append(el)
-with open('C:/new/updated_data.json', 'w', encoding='utf-8') as output:
-    json.dump(list_data, output)
+# import json
+# with open('C:/new/data.json', 'r', encoding='utf-8') as file:
+#     data = json.load(file)
+# list_data = []
+# for el in data:
+#     if type(el) == str:
+#         list_data.append(el + '!')
+#     if type(el) == int:
+#         list_data.append(el + 1)
+#     if type(el) == bool:
+#         list_data.append(not el)
+#     if type(el) == list:
+#         list_data.append(el + el)
+#     if type(el) == dict:
+#         el.setdefault("newkey", None)
+#         list_data.append(el)
+# with open('C:/new/updated_data.json', 'w', encoding='utf-8') as output:
+#     json.dump(list_data, output)
 
 
 '''Task21'''
