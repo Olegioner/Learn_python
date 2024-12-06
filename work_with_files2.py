@@ -1,4 +1,77 @@
-'''Task25'''
+'''Task4.4.15'''
+
+'''Task4.4.14'''
+# import csv
+# import json
+# from datetime import datetime
+# with open('C:/new/exam_results.csv' , 'r', encoding='utf-8') as file:
+#     students_score = csv.DictReader(file, delimiter=',')
+#     header_list = []
+#     for stud in students_score:
+#         for key in stud.keys():
+#             if key == 'score':
+#                 key = 'best_score'
+#             header_list.append(key)
+#         break
+#     stud_list = sorted(students_score, key=lambda x:datetime.strptime(x['date_and_time'], '%Y-%m-%d %H:%M:%S'))
+# stud_list = sorted(stud_list, key=lambda x: int(x['score']))
+# dict_stud = {}
+# for el in stud_list:
+#     el['score'] = int(el['score'])
+#     dict_stud[f"{el['surname']} {el['name']}"] = dict(zip(header_list, el.values()))
+#
+# sort_dict_stud = sorted(dict_stud.values(), key=lambda x: x['email'])
+#
+# with open('C:/new/best_scores.json', 'w', encoding='utf-8') as output:
+#     json.dump(sort_dict_stud, output, indent=3)
+
+'''Task4.4.13'''
+# import json
+# with open('C:/new/pools.json', 'r', encoding='utf-8') as file:
+#     pools = json.load(file)
+#     sort_pools = []
+#     for el in pools:
+#         start = int(el['WorkingHoursSummer']['Понедельник'][:2])
+#         stop = int(el['WorkingHoursSummer']['Понедельник'][6:8])
+#         length_pool = el['DimensionsSummer']['Length']
+#         width_pool = el['DimensionsSummer']['Width']
+#         if start <= 10 and stop >= 12:
+#             sort_pools.append([el['Address'], length_pool, width_pool])
+# sort_pools = sorted(sorted(sort_pools, key=lambda x: x[2]), key=lambda x: x[1])
+# print(f'{sort_pools[-1][1]}x{sort_pools[-1][2]}')
+# print(sort_pools[-1][0])
+
+'''Task4.4.12'''
+# import json
+# import csv
+# with open('C:/new/students.json', 'r', encoding='utf-8') as file:
+#     students = json.load(file)
+#     sorted_students = []
+#     for student in students:
+#         if student['age'] >= 18 and student['progress'] >= 75:
+#             sorted_students.append([student['name'], student['phone']])
+#     sorted_students = sorted(sorted_students, key=lambda x: x[0])
+#     header_list = ['name', 'phone']
+# with open('C:/new/data.csv', 'w', encoding='utf-8') as output:
+#     sort_stud = csv.DictWriter(output, delimiter=',', fieldnames=header_list)
+#     sort_stud.writeheader()
+#     for name in sorted_students:
+#         sort_stud.writerow(dict(zip(header_list, name)))
+
+
+'''Task4.4.11'''
+# import json
+# import csv
+# with (open('C:/new/playgrounds.csv', 'r', encoding='utf-8') as file):
+#     playgrounds = csv.DictReader(file, delimiter=';')
+#     dict_adm_area = {}
+#     for area in playgrounds:
+#         dict_adm_area.setdefault(area['AdmArea'], {}).setdefault(area['District'],[]).append(area['Address'])
+# with open('C:/new/addresses.json', 'w', encoding='utf-8') as output:
+#     json.dump(dict_adm_area, output, indent=3, ensure_ascii=False)
+
+
+'''Task4.4.10'''
 # import json
 # with open('C:/new/countries.json', 'r', encoding='utf-8') as file:
 #     countries = json.load(file)
