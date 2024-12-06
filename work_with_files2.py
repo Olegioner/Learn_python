@@ -1,5 +1,32 @@
+'''Task4.4.16'''
+# import json
+# with open('C:/new/food_services.json', 'r', encoding='utf-8') as file:
+#     food_services = json.load(file)
+#     dist_rest = {}
+#
+#     rest_list = sorted(food_services, key=lambda x: x['SeatsCount'])
+#     for el in rest_list:
+#         dist_rest.setdefault(el['TypeObject'], {})
+#         dist_rest[el['TypeObject']][el['Name']] = el['SeatsCount']
+#
+#     dist_rest = dict(sorted(dist_rest.items(), key=lambda x: x[0]))
+#
+#     for key, value in dist_rest.items():
+#         v = sorted(value.items(), key=lambda x: x[1])[-1]
+#         print(f'{key}: {v[0]}, {v[1]}')
 '''Task4.4.15'''
-
+# import json
+# with open('C:/new/food_services.json', 'r', encoding='utf-8') as file:
+#     food_services = json.load(file)
+#     dict_district = {}
+#     dict_restaurant = {}
+#     for el in food_services:
+#         dict_district[el['District']] = dict_district.get(el['District'], 0) + 1
+#         dict_restaurant[el['OperatingCompany']] = dict_restaurant.get(el['OperatingCompany'], 0) + 1
+#     max_distr = (sorted(dict_district.items(), key=lambda x: x[1]))[-1]
+#     max_rest = (sorted(dict_restaurant.items(), key=lambda x: x[1]))[-2]
+#     print(f'{max_distr[0]}: {max_distr[1]}')
+#     print(f'{max_rest[0]}: {max_rest[1]}')
 '''Task4.4.14'''
 # import csv
 # import json
