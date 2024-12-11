@@ -1,3 +1,40 @@
+'''Task4.5.16'''
+# from zipfile import ZipFile
+# with ZipFile('C:/new/workbook.zip') as zip_file:
+#     file_list = []
+#     for el in zip_file.infolist():
+#         if not el.is_dir():
+#             if '/' in el.filename:
+#                 name = el.filename.split('/')[-1]
+#             else:
+#                 name = el.filename
+#             k = round((el.compress_size / el.file_size) * 100)
+#             file_list.append((name, k))
+#     print(sorted(file_list, key=lambda x: x[1])[0][0])
+
+
+
+'''Task4.5.15'''
+# from zipfile import ZipFile
+# with ZipFile('C:/new/workbook.zip') as zip_file:
+#     comp_size = 0
+#     normal_size = 0
+#     for el in zip_file.infolist():
+#         if not el.is_dir():
+#             comp_size += el.compress_size
+#             normal_size += el.file_size
+# print(f'Объем исходных файлов: {normal_size} байт(а)')
+# print(f'Объем сжатых файлов: {comp_size} байт(а)')
+
+'''Task4.5.14'''
+# from zipfile import ZipFile
+# with ZipFile('C:/new/workbook.zip') as zip_file:
+#     count = 0
+#     for el in zip_file.infolist():
+#         if not el.is_dir():
+#             count += 1
+#     print(count)
+
 '''Task4.4.16'''
 # import json
 # with open('C:/new/food_services.json', 'r', encoding='utf-8') as file:
