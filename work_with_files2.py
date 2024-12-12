@@ -1,3 +1,16 @@
+'''Task4.5.17'''
+# from zipfile import ZipFile
+# from datetime import datetime
+#
+# with ZipFile('C:/new/workbook.zip') as zip_file:
+#     cur_date = datetime.strptime('2021-11-30 14:22:00', '%Y-%m-%d %H:%M:%S')
+#     file_list = []
+#     for el in zip_file.infolist():
+#         if not el.is_dir():
+#             if cur_date < datetime(*el.date_time):
+#                 file_list.append(el.filename.split('/')[-1])
+#     print(*sorted(file_list), sep='\n')
+
 '''Task4.5.16'''
 # from zipfile import ZipFile
 # with ZipFile('C:/new/workbook.zip') as zip_file:
