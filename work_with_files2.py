@@ -1,3 +1,54 @@
+'''Task4.5.22'''
+
+'''Task4.5.21'''
+# from zipfile import ZipFile
+#
+# def extract_this(zip_name, *args):
+#     with ZipFile(zip_name) as zip_file:
+#         if len(args) == 0:
+#             zip_file.extractall()
+#         else:
+#             [zip_file.extract(el) for el in args]
+
+'''Task4.5.20'''
+# from zipfile import ZipFile
+#
+# file_names = ['how to prove.pdf', 'fipi_demo_2022.pdf', 'Hollow Knight Silksong.exe',
+#               'code.jpeg', 'stepik.png', 'readme.txt', 'shopping_list.txt',
+#               'Alexandra Savior – Crying All the Time.mp3', 'homework.py', 'test.py']
+#
+# with ZipFile('files_test.zip', mode='w') as zip_test:
+#     [zip_test.write(el) for el in file_names]
+#     file_names_new = [el.filename for el in zip_test.infolist() if el.file_size < 100]
+#
+# with ZipFile('files.zip', 'w') as zip_file:
+#     [zip_file.write(el) for el in file_names_new]
+
+
+'''Task4.5.19'''
+# from zipfile import ZipFile
+#
+# file_names = ['how to prove.pdf', 'fipi_demo_2022.pdf', 'Hollow Knight Silksong.exe',
+#               'code.jpeg', 'stepik.png', 'readme.txt', 'shopping_list.txt',
+#               'Alexandra Savior – Crying All the Time.mp3', 'homework.py', 'test.py']
+#
+# with ZipFile('files.zip', mode='w') as zip_file:
+#     for el in file_names:
+#         zip_file.write(el)
+'''Task4.5.18'''
+# from zipfile import ZipFile
+# from datetime import datetime
+# with ZipFile('C:/new/workbook.zip') as zip_file:
+#     file_list = [[el.filename.split('/')[-1], el.date_time, el.file_size, el.compress_size] for el in zip_file.infolist() if not el.is_dir()]
+#     file_list = sorted(file_list, key=lambda x: x[0])
+#     for el in file_list:
+#         print(el[0])
+#         print(f'  Дата модификации файла: {datetime(*el[1])}')
+#         print(f'  Объем исходного файла: {el[2]} байт(а)')
+#         print(f'  Объем сжатого файла: {el[3]} байт(а)')
+#         print()
+
+
 '''Task4.5.17'''
 # from zipfile import ZipFile
 # from datetime import datetime
