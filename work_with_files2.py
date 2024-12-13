@@ -1,4 +1,40 @@
+'''Task4.5.23'''
+# from zipfile import ZipFile
+# unit = ['B', 'KB', 'MB', 'GB']
+# with ZipFile('C:/new/desktop.zip') as zip_file:
+#     for el in zip_file.infolist():
+#         name = [i for i in el.filename.split('/')]
+#         if not el.is_dir():
+#             file_name = name[-1]
+#             size  = el.file_size
+#             count = 0
+#             while len(str(size)) > 3:
+#                 size = round(size / 1024)
+#                 count += 1
+#             size_file = f'{size} {unit[count]}'
+#             print(f"{'  ' * (len(name) - 1)}{file_name} {size_file}")
+#         else:
+#             print(f"{'  ' * (len(name) - 2)}{name[-2]}")
+
 '''Task4.5.22'''
+# from zipfile import ZipFile
+# import json
+#
+# with ZipFile('C:/new/data.zip') as zip_file:
+#     player_list = []
+#     for el in zip_file.infolist():
+#         if not el.is_dir():
+#             if el.filename.endswith('.json'):
+#                 with zip_file.open(el.filename) as file:
+#                     try:
+#                         player = json.load(file)
+#                         if player['team'] == 'Arsenal':
+#                             player_list.append([player['first_name'], player['last_name']])
+#                     except:
+#                         continue
+# player_list_sort = sorted(sorted(player_list, key=lambda x: x[1]), key=lambda x: x[0])
+# for player in player_list_sort:
+#     print(*player)
 
 '''Task4.5.21'''
 # from zipfile import ZipFile
