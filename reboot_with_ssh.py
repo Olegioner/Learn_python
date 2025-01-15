@@ -4,8 +4,7 @@ client = paramiko.SSHClient()
 
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-client.connect('172.16.10.115', username='pi', password='246249')
+client.connect('ip-адрес', username='имя', password='*******')
 
-stdin, stdout, stderr = client.exec_command('sudo reboot')
+client.exec_command('sudo reboot')
 
-client.close()
