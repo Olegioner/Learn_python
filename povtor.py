@@ -1,3 +1,22 @@
+'''Task21'''
+#1
+# alphabet = ''.join([chr(el) for el in range(97, 123)])
+# symbols = ''.join([el for el in input().split()])
+# text = input().lower()
+# table_sym = text.maketrans(alphabet, symbols)
+# print(text.translate(table_sym))
+#2
+# alphabet = ''.join([chr(el) for el in range(97, 123)])
+# symbols = input()
+# text = input().lower()
+# 
+# for char in text:
+#     if char in alphabet:
+#         ind = alphabet.index(char)
+#         print(symbols[ind], end='')
+#     else:
+#         print(char, end='')
+
 '''Task20'''
 # with open('C:/new/file.txt', 'r', encoding='utf-8') as file:
 #     file_list = [[el.strip() for el in row.split()] for row in file.readlines()]
