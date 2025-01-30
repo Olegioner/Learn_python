@@ -1,10 +1,35 @@
+'''Task 6.5.24'''
+# from collections import defaultdict
+#
+# def best_sender(messages, senders):
+#     senders_dict = defaultdict(int)
+#     for mes, send in zip(messages, senders):
+#         senders_dict[send] += len(mes.split())
+#     count_mes = max(senders_dict.values())
+#     best = max(dict(filter(lambda x: x[1] == count_mes, senders_dict.items())), key=lambda x: x[0])
+#     return best
+#
+#
+#
+# messages = ['Hello userTwooo', 'Hi userThree', 'Wonderful day Alice', 'Nice day userThree']
+# senders = ['Alice', 'userTwo', 'userThree', 'Alice']
+# print(best_sender(messages, senders))
+
 '''Task 6.5.23'''
 # from collections import defaultdict
 #
 # def flip_dict(dict_of_list):
 #     dict_flip = defaultdict(list)
-#     for k, v in dict_of_list:
-
+#
+#     for k, v in dict_of_list.items():
+#         for el in v:
+#             dict_flip[el].append(k)
+#     return dict_flip
+#
+# data = {'Arthur': ['cacao', 'tea', 'juice'], 'Timur': ['coffee', 'tea', 'juice'], 'Anri': ['juice', 'coffee']}
+#
+# for key, values in flip_dict(data).items():
+#     print(f'{key}: {", ".join(values)}')
 
 '''Task 6.5.22'''
 # from collections import defaultdict
