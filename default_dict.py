@@ -1,3 +1,16 @@
+'''Task 6.6.19'''
+# from collections import OrderedDict
+#
+# def custom_sort(ordered_dict, by_values=False):
+#     if by_values:
+#         for key, value in sorted(ordered_dict.items(), key=lambda x: x[1]):
+#             ordered_dict.move_to_end(key)
+#     else:
+#         for key in sorted(ordered_dict.keys()):
+#             ordered_dict.move_to_end(key)
+
+
+
 '''Task 6.5.24'''
 # from collections import defaultdict
 #
