@@ -1,3 +1,43 @@
+'''Task 6.8.16'''
+# import sys
+# from collections import Counter
+#
+# student = Counter()
+# for el in sys.stdin:
+#     for k,v in el.split():
+#         student[k] = int(v)
+#
+# print(student.most_common()[-2][0])
+
+'''Task 6.8.15'''
+# from collections import Counter
+#
+# words = Counter([len(el) for el in input().split()])
+#
+# for key, value in sorted(words.items(), key=lambda x: x[1]):
+#     print(f'Слов длины {key}: {value}')
+
+'''Task 6.8.14'''
+# from collections import Counter
+#
+# words = Counter(el.lower() for el in input().split())
+# max_count = words.most_common(1)[0][1]
+# print(sorted(filter(lambda x: words[x]==max_count, words))[-1])
+
+'''Task 6.8.13'''
+# from collections import Counter
+#
+# count_words = Counter(input().lower().split())
+# min_count = []
+# for word in count_words:
+#     if count_words[word] == min(count_words.values()):
+#         min_count.append(word)
+# print(', '.join(sorted(min_count)))
+'''Task 6.8.12'''
+# from collections import Counter
+#
+# count_words = Counter([el.lower() for el in input().split()])
+# print(count_words.most_common(1)[0][0])
 '''Task 6.7.19'''
 # from collections import Counter
 #
