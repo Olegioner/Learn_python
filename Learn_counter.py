@@ -1,3 +1,41 @@
+'''Task 6.8.20'''
+from collections import Counter
+
+def print_bar_chart(data, mark):
+    pass
+
+'''Task 6.8.19'''
+# from collections import Counter
+#
+# def scrabble(symbols, word):
+#     if Counter(symbols.lower()) > Counter(word.lower()):
+#         return True
+#     else:
+#         return False
+#
+# print(scrabble('begk', 'beegeek'))
+'''Task 6.8.18'''
+# import csv
+# from collections import Counter
+#
+# with open('C:/new/name_log.csv', 'r', encoding='utf-8') as file:
+#     log = csv.DictReader(file, delimiter=',' )
+#     count_change_name = Counter()
+#     for user in log:
+#         count_change_name[user['email']] += 1
+# for k,v in sorted(count_change_name.items(), key=lambda x: x[0]):
+#     print(f'{k}: {v}')
+'''Task 6.8.17'''
+
+# from collections import Counter
+#
+# data = Counter('aksjaskfjsklfjdslkfjajfopewtoieqpwdpqworiiqjskanvmcxbmpewrqopkqwlmdzczmxvmvlnjpjqpkqzxvmbowiqeorewi')
+# data.min_values = lambda: list(filter(lambda x: x[1] == data.most_common()[-1][1], data.items()))
+# data.max_values = lambda: list(filter(lambda x: x[1] == data.most_common()[0][1], data.items()))
+#
+# print(data.max_values())
+# print(data.min_values())
+
 '''Task 6.8.16'''
 # import sys
 # from collections import Counter
