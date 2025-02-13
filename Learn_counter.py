@@ -1,8 +1,50 @@
-'''Task 6.8.20'''
-from collections import Counter
+'''Task 6.8.22'''
+# from collections import Counter
+#
+# dict_books = Counter(input().split())
+# total_profit = 0
+#
+# for i in range(int(input())):
+#     book, price = input().split()
+#     if dict_books[book] > 0:
+#         total_profit += int(price)
+#         dict_books.subtract({book:1})
+#     else:
+#         continue
+#
+# print(total_profit)
 
-def print_bar_chart(data, mark):
-    pass
+'''Task 6.8.21'''
+# from collections import Counter
+# import json
+# import csv
+#
+# all_products = Counter()
+# for i in range(1, 5):
+#     with open('C:/new/prices/quarter' + str(i) + '.csv', 'r', encoding='utf-8') as file:
+#         quarter = csv.reader(file, delimiter=',')
+#         next(quarter)
+#         for el in quarter:
+#             k, *count = el
+#             count = sum(list(map(lambda x: int(x), count)))
+#             all_products[k] += count
+# with open('C:/new/prices/prices.json', 'r', encoding='utf-8') as file:
+#     prices = json.load(file)
+#
+# for k,v in prices.items():
+#     all_products[k] = all_products[k] * v
+#
+# print(all_products.total())
+
+'''Task 6.8.20'''
+# from collections import Counter
+#
+# def print_bar_chart(data, mark):
+#     data_counter = Counter(data)
+#     max_len = len(max(data_counter.keys(), key=lambda x: len(x)))
+#     for k,v in data_counter.most_common():
+#         print(f'{k}{" " * (max_len - len(k))} |{mark * v}')
+
 
 '''Task 6.8.19'''
 # from collections import Counter
