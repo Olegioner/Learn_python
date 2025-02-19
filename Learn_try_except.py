@@ -1,3 +1,18 @@
+'''Task 7.4.19'''
+
+'''Task 7.4.18'''
+# def get_weekday(number):
+#     week_days = {1: 'Понедельник', 2: 'Вторник',
+#                  3: 'Среда', 4: 'Четверг',
+#                  5: 'Пятница', 6: 'Суббота',
+#                  7: 'Воскресенье'}
+#     if type(number) != int:
+#         raise TypeError('Аргумент не является целым числом')
+#     elif number not in week_days.keys():
+#         raise ValueError('Аргумент не принадлежит требуемому диапазону')
+#     else:
+#         return week_days[number]
+
 '''Task 7.3.22'''
 # try:
 #     with open(input(), 'r', encoding='utf-8') as file:
