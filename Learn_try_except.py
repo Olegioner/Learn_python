@@ -1,3 +1,18 @@
+'''Task 7.3.22'''
+# try:
+#     with open(input(), 'r', encoding='utf-8') as file:
+#         print(file.read())
+# except FileNotFoundError:
+#     print('Файл не найден')
+
+'''Task 7.3.21'''
+
+# def add_to_list_in_dict(data, key, element):
+#     try:
+#         data[key].append(element)
+#     except KeyError:
+#         data.setdefault(key, [element])
+
 '''Task 7.3.20'''
 # months_name = {1: 'January', 2: 'February', 3: 'March',
 #                4: 'April', 5: 'May', 6: 'June',
