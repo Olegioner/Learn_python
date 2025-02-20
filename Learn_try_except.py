@@ -1,4 +1,27 @@
+'''Task 7.4.20'''
+# import json
+#
+# try:
+#     with open(input(), 'r', encoding='utf-8') as file:
+#         try:
+#             json_file = json.load(file)
+#             print(json_file)
+#         except json.JSONDecodeError:
+#             print('Ошибка при десериализации')
+# except FileNotFoundError:
+#     print('Файл не найден')
+
 '''Task 7.4.19'''
+
+# def get_id(names, name):
+#     if type(name) == str:
+#         if name.isalpha() and name.istitle():
+#             names.append(name)
+#             return len(names)
+#         else:
+#             raise ValueError('Имя не является корректным')
+#     else:
+#         raise TypeError('Имя не является строкой')
 
 '''Task 7.4.18'''
 # def get_weekday(number):
