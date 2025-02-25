@@ -1,3 +1,59 @@
+'''Task 7.5.8 and 7.5.9'''
+# import sys
+#
+#
+# class PasswordError(Exception):
+#     pass
+#
+# class LengthError(PasswordError):
+#     pass
+#
+# class LetterError(PasswordError):
+#     pass
+#
+# class DigitError(PasswordError):
+#     pass
+#
+#
+# def is_good_password(string):
+#     try:
+#         if len(string) < 9:
+#             raise LengthError('LengthError')
+#         elif string.isdigit()or (string.lower() == string or string.upper() == string):
+#             raise LetterError('LetterError')
+#         elif string.isalpha():
+#             raise DigitError('DigitError')
+#         else:
+#             return True
+#     except LengthError as l:
+#         print(l)
+#     except LetterError as let:
+#         print(let)
+#     except DigitError as d:
+#         print(d)
+#
+#
+#
+# for el in sys.stdin:
+#     if is_good_password(el.strip()):
+#         print('Success!')
+#         break
+
+
+
+
+'''Task 7.5.7'''
+# def is_good_password(string):
+#     if all(
+#         (len(string) >= 9,
+#          any(char.islower() for char in string),
+#          any(char.isupper() for char in string),
+#          any(char.isdigit() for char in string))
+#             ):
+#         return True
+#     else:
+#         return False
+
 '''Task 7.4.20'''
 # import json
 #
