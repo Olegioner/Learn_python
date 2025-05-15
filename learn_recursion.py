@@ -1,3 +1,14 @@
+'''Task 8.2.11'''
+
+# def hourglass(n):
+#
+#     if n < 4:
+#         print((str(n) * (20 - n * 4)).center(16))
+#         hourglass(n + 1)
+#     print((str(n) * (20 - n * 4)).center(16))
+#
+# hourglass(1)
+
 '''Task 8.2.10'''
 # def triangle(h):
 #     def res(n):
@@ -13,7 +24,7 @@
 #         print('*' * h)
 #         triangle(h - 1)
 #
-# triangle(5)
+# triangle(5)сто
 
 '''Task 8.2.8'''
 # def func():
