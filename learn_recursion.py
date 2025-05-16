@@ -1,3 +1,22 @@
+'''task 8.2.13'''
+
+# def print_digits(number):
+#     number = list(str(number))
+#     def res(digit):
+#         if len(digit) > 0:
+#             print(digit.pop(0))
+#             res(digit)
+#     res(number)
+#
+# print_digits(8)
+
+'''Task 8.2.12'''
+
+# def print_digits(arr):
+#     if arr > 0:
+#         print(arr % 10)
+#         arr //= 10
+#         print_digits(arr)
 '''Task 8.2.11'''
 
 # def hourglass(n):
