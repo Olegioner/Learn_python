@@ -1,3 +1,47 @@
+'''Task 8.3.10'''
+# def get_pow(a, n):
+#     if n == 1:
+#         return a
+#     elif n == 0:
+#         a = 1
+#         return a
+#     else:
+#         return a * get_pow(a, n - 1)
+'''Task 8.3.9'''
+# def range_sum(numbers, start, end):
+#     if start == end:
+#         return numbers[start]
+#     else:
+#         return numbers[start] + range_sum(numbers, start + 1 , end)
+'''Task 8.3.8'''
+
+# def number_of_frogs(year):
+#     if year <= 1:
+#         return 77
+#     else:
+#         return 3 * (number_of_frogs(year - 1) - 30)
+
+'''Task 8.3.7'''
+
+# def sum_num(num):
+#     if num < 10:
+#         return num
+#     else:
+#          return num % 10 + sum_num(num // 10)
+#
+# print(sum_num(int(input())))
+
+'''Task 8.3.6'''
+# def count(num):
+#     if num < 9:
+#         return 1
+#     else:
+#         return 1 + count(num // 10)
+#
+# print(count(int(input())))
+
+
+
 '''task 8.2.13'''
 
 # def print_digits(number):
