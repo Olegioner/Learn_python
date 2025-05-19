@@ -1,3 +1,74 @@
+'''Task 8.3.17'''
+# def minus_five(n):
+#     print(n)
+#     if n - 5 < 0:
+#         print(n - 5)
+#     else:
+#         minus_five(n - 5)
+#     print(n)
+#
+#
+# n = int(input())
+# minus_five(n)
+'''Task 8.3.16'''
+# def to_binary(number):
+#     if number <= 1:
+#         return number
+#     else:
+#         return str(to_binary(number // 2)) + str(number % 2)
+
+'''Task 8.3.15'''
+# def is_palindrome(string):
+#     if len(string) == 0 or len(string) == 1:
+#         return True
+#     elif string[0] != string[-1]:
+#         return False
+#     else:
+#         return is_palindrome(string[1:-1])
+
+'''Task 8.3.14'''
+
+# def tribonacci(n):
+#     cache = {1: 1, 2: 1, 3: 1}
+#
+#     def tribonacci_rec(n):
+#         result = cache.get(n)
+#         if result is None:
+#             result = tribonacci_rec(n - 3) + tribonacci_rec(n - 2) + tribonacci_rec(n - 1)
+#             cache[n] = result
+#         return result
+#
+#     return tribonacci_rec(n)
+
+'''Task 8.3.13'''
+# def is_power(number):
+#     if number == 1:
+#         return True
+#     elif number >= 2:
+#         return is_power(number / 2)
+#     else:
+#         return False
+
+
+'''Task 8.3.12'''
+# def recursive_sum(a, b):
+#     if b == 0:
+#         return a
+#     else:
+#         return 1 + recursive_sum(a, b - 1)
+#
+# print(recursive_sum(0, 0))
+
+'''Task 8.3.11'''
+# def get_fast_pow(a, n):
+#    if n == 0:
+#        return 1
+#    elif n % 2 == 0:
+#        return get_fast_pow(a * a, n // 2)
+#    else:
+#        return a * get_fast_pow(a, n - 1)
+
+
 '''Task 8.3.10'''
 # def get_pow(a, n):
 #     if n == 1:
