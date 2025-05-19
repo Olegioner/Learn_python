@@ -1,3 +1,57 @@
+'''Task 8.4.7'''
+def get_all_values(nested_dict, key):
+    res = set()
+    if key in nested_dict:
+        return nested_dict[key]
+    for v in nested_dict.values():
+        if type(v) == dict:
+            value = get_all_values(v, key)
+            if value is not None:
+                print(value)
+                res.add(value)
+    return res
+
+my_dict = {'users': {'Arthur': {'grades': [4, 4, 3], 'top_grade': 4}, 'Timur': {'grades': [5, 5, 5], 'top_grade': 5}}}
+result = get_all_values(my_dict, 'top_grade')
+#print(result)
+print(*sorted(result))
+
+'''Task 8.4.6'''
+# def get_value(nested_dict, key):
+#     if key in nested_dict:
+#         return nested_dict[key]
+#     for v in nested_dict.values():
+#         if type(v) == dict:
+#             value = get_value(v, key)
+#             if value is not None:
+#                 return value
+
+
+'''Task 8.4.5'''
+# def linear(nested_lists):
+#     total = []
+#     if len(nested_lists) == 0:
+#          return 0
+#     for el in nested_lists:
+#         if type(el) == int:
+#             total.append(el)
+#         elif type(el) == list:
+#             total.extend(linear(el))
+#     return total
+
+'''Task 8.4.4'''
+# def recursive_sum(nested_lists):
+#     total = 0
+#     if len(nested_lists) == 0:
+#         return 0
+#     for el in nested_lists:
+#         if type(el) == int:
+#             total += el
+#         elif type(el) == list:
+#             total += recursive_sum(el)
+#     return total
+
+
 '''Task 8.3.17'''
 # def minus_five(n):
 #     print(n)
