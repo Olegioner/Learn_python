@@ -1,3 +1,63 @@
+'''Task 9.1.16'''
+# n = sorted(input())
+#
+# a = list(filter(lambda x: x.islower(), n))
+# b = list(filter(lambda x: x.isupper(), n))
+# c = list(filter(lambda x: x if int(x) % 2 != 0 else 0, filter(lambda x: x.isdigit(), n)))
+# d = list(filter(lambda x: x if int(x) % 2 == 0 else 0, filter(lambda x: x.isdigit(), n)))
+# print(''.join(a) + ''.join(b) + ''.join(c) + ''.join(d))
+
+'''Task 9.1.15'''
+
+# def zip_longest(*args, fill=None):
+#
+#     res = []
+#     max_len = max(map(len, args))
+#     for el in args:
+#         if len(el) != max_len:
+#             el.extend([fill] * (max_len - len(el)))
+#
+#     for i in zip(*args):
+#         res.append(i)
+#     return res
+
+'''Task 9.1.14'''
+# names = ['Moana', 'Cars', 'Zootopia', 'Ratatouille', 'Coco', 'Inside Out', 'Finding Nemo', 'Frozen']
+# budgets = [150000000, 120000000, 150000000, 150000000, 180000000, 175000000, 94000000, 150000000]
+# box_offices = [643331111, 462216280, 1023784195, 620702951, 807082196, 857611174, 940335536, 1280802282]
+#
+# for el in sorted(zip(names, budgets, box_offices), key=lambda x: x[0]):
+#     print(f'{el[0]}: {el[2] - el[1]}$')
+#
+
+'''Task 9.1.13'''
+# def my_pow(number):
+#     return sum(map(lambda x: int(x[1])**x[0], enumerate(list(str(number)), 1)))
+
+'''Task 9.1.12'''
+# numbers = [-7724, 5023, 3197, -102, -4129, -880,
+#            5857, -2866, -8913, 1195, 9809, 5347,
+#            -8071, 903, 3030, -4347, -3354, 1024,
+#            8670, 4210, -5228, 8900, 4823, -2002,
+#            4900, 9520, -3658, 1104, -9554, 3064,
+#            9632, -8701, 3384, 4370, 2034, 7822,
+#            -9694, 3347, 7440, -8459, 3238, -5193,
+#            -3381, 5281, 9022, 5559, 7593, -6540,
+#            -6204, -2483, 8729, 5810, -8254, -9846,
+#            -1801, 4882, 3838, -3140, 7609, -3325,
+#            6026, 2994, -1677, 1266, -1893, -4408,
+#            -5722, -2841, 9812, 5837, -7474, 4624,
+#            -664, 6998, 7888, -971, 8810, 3812,
+#            -5396, 2593, 512, -4634, 9735, -3062,
+#            9031, -9300, 3657, 6332, 7552, 8125,
+#            -725, 4392, 1727, 8194, -2828, -4314,
+#            -8967, -7912, -1363, -5957]
+#
+# print(max(list(enumerate(numbers)),key=lambda x: x[1])[0])
+'''Task 9.1.11'''
+# def custom_isinstance(objects, typeinfo):
+#     return sum(map(lambda x: 1 if isinstance(x, typeinfo) else 0, objects))
+
 '''Task 9.1.10'''
 # def is_greater(lists, number):
 #     return any(map(lambda x: True if sum(x) > number else False, lists))
