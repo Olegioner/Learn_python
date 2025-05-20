@@ -1,20 +1,27 @@
+'''Task 8.4.8'''
+# def dict_travel(nested_dicts, new_str = ''):
+#     for key in sorted(nested_dicts.keys()):
+#         if type(nested_dicts[key]) != dict:
+#             print(f'{new_str}{key}: {nested_dicts[key]}')
+#         else:
+#             dict_travel(nested_dicts[key], new_str + f'{key}.')
+#
+# data = {'b': {'c': 30, 'a': 10, 'b': {'d': 40, 'e': 50}}}
+#
+# dict_travel(data)
 '''Task 8.4.7'''
-def get_all_values(nested_dict, key):
-    res = set()
-    if key in nested_dict:
-        return nested_dict[key]
-    for v in nested_dict.values():
-        if type(v) == dict:
-            value = get_all_values(v, key)
-            if value is not None:
-                print(value)
-                res.add(value)
-    return res
-
-my_dict = {'users': {'Arthur': {'grades': [4, 4, 3], 'top_grade': 4}, 'Timur': {'grades': [5, 5, 5], 'top_grade': 5}}}
-result = get_all_values(my_dict, 'top_grade')
-#print(result)
-print(*sorted(result))
+# def get_all_values(nested_dict, key):
+#     res = set()
+#     if key in nested_dict:
+#         res.add(nested_dict[key])
+#     for v in nested_dict.values():
+#         if type(v) == dict:
+#             value = get_all_values(v, key)
+#             if value is not None:
+#                 res.update(value)
+#             else:
+#                 continue
+#     return res
 
 '''Task 8.4.6'''
 # def get_value(nested_dict, key):
