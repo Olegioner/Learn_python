@@ -1,3 +1,49 @@
+'''Task 9.2.22'''
+
+# new_func = input()
+# a,b = map(int, input().split())
+# res = [eval(new_func) for x in range(a, b+1)]
+# print(f'Минимальное значение функции {new_func} на отрезке [{a}; {b}] равно {min(res)}')
+# print(f'Максимальное значение функции {new_func} на отрезке [{a}; {b}] равно {max(res)}')
+
+
+'''Task 9.2.21'''
+# import sys
+# print(max([eval(el) for el in sys.stdin]))
+
+'''Task 9.2.20'''
+# n = eval(input())
+# print(eval({list: 'n[-1]', tuple: 'n[0]', set: 'len(n)'}[type(n)]))
+
+
+# n = input()
+# new_object = eval(n)
+#
+# if isinstance(new_object, list):
+#     print(new_object[-1])
+# elif isinstance(new_object, tuple):
+#     print(new_object[0])
+# else:
+#     print(len(new_object))
+
+
+'''Task 9.2.8'''
+# def hash_as_key(objects):
+#     dict_hash = dict()
+#     for el in objects:
+#         if hash(el) not in dict_hash:
+#             dict_hash[hash(el)] = el
+#         elif hash(el) in dict_hash and type(dict_hash[hash(el)]) != list:
+#             dict_hash[hash(el)] = [dict_hash[hash(el)]]
+#             dict_hash[hash(el)].append(el)
+#         else:
+#             dict_hash[hash(el)].append(el)
+#     return dict_hash
+#
+# data = [(1, 2, 3), (1, 2, 3), (0, 0, 0), 10, (144, 75, 60), 20, 30]
+#
+# print(hash_as_key(data))
+
 '''Task 9.1.16'''
 # n = sorted(input())
 #
