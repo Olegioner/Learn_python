@@ -1,3 +1,33 @@
+'''Task 9.5.18'''
+# def sourcetemplate(url):
+#     def agr(**kwarg):
+#         res = url
+#         if len(kwarg) == 0:
+#             return res
+#         else:
+#             res += '?'
+#             for key in sorted(kwarg.keys()):
+#                 res += f'{key}={kwarg[key]}&'
+#
+#         return res[:-1]
+#     return agr
+#
+# url = 'https://stepik.org/lesson/651459/step/14'
+# load = sourcetemplate(url)
+# print(load(thread='solutions', unit=648165))
+'''Task 9.5.17'''
+# def generator_square_polynom(a, b, c):
+#     return lambda x: a * x**2 + x * b + c
+#
+# f = generator_square_polynom(26, 83, 22)
+# print(f(55))
+
+'''Task 9.5.16'''
+# def power(degree):
+#     return lambda x: x**degree
+#
+# result = power(4)(2)
+# print(result)
 '''Task 9.4.18'''
 # def remove_marks(text, marks):
 #     remove_marks.__dict__['count'] = remove_marks.__dict__.get('count', 0) + 1
