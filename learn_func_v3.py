@@ -1,3 +1,51 @@
+'''Task 9.4.18'''
+# def remove_marks(text, marks):
+#     remove_marks.__dict__['count'] = remove_marks.__dict__.get('count', 0) + 1
+#     return ''.join(filter(lambda x: x not in marks, text))
+#
+#
+# marks = '.,!?'
+# text = 'Are you listening? Meet my family! There are my parents, my brother and me.'
+#
+# for mark in marks:
+#     print(remove_marks(text, mark))
+#
+# print(remove_marks.count)
+'''Task 9.4.17'''
+# def polynom(x):
+#     res = x**2 + 1
+#     polynom.__dict__.setdefault('values', set())
+#     polynom.values.add(res)
+#     return res
+#
+#
+# polynom(1)
+# polynom(2)
+# polynom(3)
+#
+# print(*sorted(polynom.values))
+
+'''Task 9.4.12'''
+# def change_print(*args, sep=' ', end='\n'):
+#     res = list()
+#     for el in args:
+#         if type(el) == str:
+#             res.append(str(el).upper())
+#         else:
+#             res.append(str(el))
+#     old_print(*res, sep = sep.upper(), end = end.upper())
+#
+# old_print = print
+# print  = change_print
+
+
+'''Task 9.4.11'''
+# def numbers_sum(elems):
+#     '''Принимает список и возвращает сумму его чисел (int, float),
+# игнорируя нечисловые объекты. 0 - если в списке чисел нет.'''
+#     return sum(filter(lambda x: type(x) in (int, float), elems))
+#
+# print(numbers_sum.__doc__)
 '''Task 9.3.18'''
 #import string
 #моё:
