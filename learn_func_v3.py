@@ -1,5 +1,25 @@
+'''Task 9.6.17'''
+
+# def matrix_to_dict(matrix:list[list[int | float]]) -> dict[int, list[int | float]]:
+#     return {el[0]: el[1] for el in enumerate(matrix, 1)}
+
+'''Task 9.6.16'''
+# def cyclic_shift(numbers: list[int | float], step: int) -> None:
+#     numbers[:] = [numbers[(el - step) % len(numbers)] for el in range(len(numbers))]
+
+
+'''Task 9.6.15'''
+
+# def top_grade(grades: dict[str, str | list[int]]) -> dict[str, str | int]:
+#     grades.setdefault('top_grades', max(grades['grades']))
+#     del grades['grades']
+#     return grades
+
+
 '''Task 9.6.14'''
 
+# def get_digits(number: int | float) -> list[int]:
+#     return [int(el) for el in str(number) if el != '.']
 
 '''Task 9.5.20'''
 # def sort_priority(values, group):
