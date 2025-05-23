@@ -1,3 +1,34 @@
+'''Task 9.6.14'''
+
+
+'''Task 9.5.20'''
+# def sort_priority(values, group):
+#     values.sort()
+#     group = list(group)
+#     group.sort()
+#     for el in group[::-1]:
+#         if el in values:
+#             values.remove(el)
+#             values.insert(0, el)
+
+# как надо было:
+# def sort_priority(numbers, group):
+#     numbers.sort(key=lambda x: (x not in group, x))
+
+'''Task 9.5.19'''
+# import datetime
+# from datetime import date
+#
+#
+# def date_formatter(country_code):
+#     base_format = {'ru': '%d.%m.%Y', 'us': '%m-%d-%Y',
+#                    'ca': '%Y-%m-%d', 'br': '%d/%m/%Y',
+#                    'fr': '%d.%m.%Y', 'pt': '%d-%m-%Y',}
+#     return lambda x: datetime.datetime.strftime(x, base_format[country_code])
+#
+# date_ru = date_formatter('us')
+# today = date(2025, 1, 5)
+# print(date_ru(today))
 '''Task 9.5.18'''
 # def sourcetemplate(url):
 #     def agr(**kwarg):
