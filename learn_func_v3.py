@@ -1,3 +1,66 @@
+'''Task 9.7.23'''
+# def exception_decorator(func):
+#     def behavior(*args, **kwargs):
+#         try:
+#             res = func(*args, **kwargs)
+#             return res, 'Функция выполнилась без ошибок'
+#         except:
+#             return None, 'При вызове функции произошла ошибка'
+#     return behavior
+#
+#
+# @exception_decorator
+# def f(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# print(f(1, 2, 3, param1=4, param2=10))
+'''Task 9.7.22'''
+# def reverse_args(func):
+#     def wrapper(*args, **kwargs):
+#         args  = tuple(el for el in args[::-1])
+#         res = func(*args, **kwargs)
+#         return res
+#     return wrapper
+
+'''Task 9.7.21'''
+# def do_twice(func):
+#     def wrapper(*args, **kwargs):
+#         for i in range(2):
+#             res = func(*args, **kwargs)
+#         return res
+#     return wrapper
+
+
+'''Task 9.7.20'''
+# def upper_print(func):
+#     def wrapper(*args, **kwargs):
+#         args = tuple(str(el).upper() for el in args)
+#         kwargs = {k: v.upper() for k, v in kwargs.items() if type(v) == str}
+#         func(*args, **kwargs)
+#     return wrapper
+#
+#
+# print = upper_print(print)
+# print(111, 222, 333, sep='xxx')
+
+'''Task 9.7.19'''
+# def sandwich(func):
+#     def wrapper(*args, **kwargs):
+#         print('---- Верхний ломтик хлеба ----')
+#         res = func(*args, **kwargs)
+#         print('---- Нижний ломтик хлеба ----')
+#         return res
+#     return wrapper
+#
+#
+# @sandwich
+# def add_ingredients(ingredients):
+#     print(' | '.join(ingredients))
+#
+# add_ingredients(['томат', 'салат', 'сыр', 'бекон'])
+
+
 '''Task 9.6.17'''
 
 # def matrix_to_dict(matrix:list[list[int | float]]) -> dict[int, list[int | float]]:
