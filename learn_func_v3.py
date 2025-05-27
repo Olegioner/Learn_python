@@ -1,3 +1,27 @@
+'''Task 9.7.24'''
+# def takes_positive(func):
+#     def wrapper(*args, **kwargs):
+#         all_arg = [*args, *kwargs.values()]
+#         print(all_arg)
+#         if all(map(lambda x: 1 if isinstance(x, int) else 0, all_arg)):
+#             if all(map(lambda x: 1 if x > 0 else 0, all_arg)):
+#                 res = func(*args, **kwargs)
+#             else:
+#                 raise ValueError
+#         else:
+#             raise TypeError
+#         return res
+#     return wrapper
+#
+#
+# @takes_positive
+# def positive_sum(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# print(positive_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, par1=1, sep=4))
+
+
 '''Task 9.7.23'''
 # def exception_decorator(func):
 #     def behavior(*args, **kwargs):
