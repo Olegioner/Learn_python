@@ -1,3 +1,30 @@
+'''Task 9.8.18'''
+from functools import wraps
+
+def make_html(tag):
+    def make_html_decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            value = func(*args, **kwargs)
+            return f'<{tag}>{value}</{tag}>'
+        return wrapper
+    return make_html_decorator
+
+'''Task 9.8.17'''
+# from functools import wraps
+#
+# def prefix(string, to_the_end=False):
+#     def prefix_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             value = func(*args, **kwargs)
+#             if to_the_end:
+#                 return value + string
+#             else:
+#                 return string + value
+#         return wrapper
+#     return prefix_decorator
+
 '''Task 9.8.11'''
 
 # from functools import wraps
