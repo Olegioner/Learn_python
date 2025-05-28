@@ -1,3 +1,39 @@
+'''Task 9.8.11'''
+
+# from functools import wraps
+#
+# def trace(func):
+#     @wraps(func)
+#     def wrapper(*args, **kwargs):
+#         value = func(*args, **kwargs)
+#         print(f'TRACE: вызов {wrapper.__name__}() с аргументами: {args}, {kwargs}')
+#         print(f"TRACE: возвращаемое значение {wrapper.__name__}(): {repr(value)}")
+#         return value
+#     return wrapper
+
+
+'''Task 9.8.10'''
+# from functools import wraps
+#
+# def returns_string(func):
+#     @wraps(func)
+#     def wrapper(*args, **kwargs):
+#         value = func(*args, **kwargs)
+#         if isinstance(value, str):
+#             return value
+#         else:
+#             raise TypeError
+#     return wrapper
+'''Task 9.8.9'''
+# from functools import wraps
+#
+# def square(func):
+#     @wraps(func)
+#     def wrapper(*args, **kwargs):
+#         value = func(*args, **kwargs)
+#         return value ** 2
+#     return wrapper
+
 '''Task 9.7.24'''
 # def takes_positive(func):
 #     def wrapper(*args, **kwargs):
