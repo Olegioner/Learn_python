@@ -1,14 +1,53 @@
-'''Task 9.8.18'''
-from functools import wraps
+'''Task 9.8.20'''
+# from functools import wraps
+#
+# def strip_range(start, end, char='.'):
+#     def strip_range_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             value = func(*args, **kwargs)
+#             st = len(value[start:end])
+#             return value[:start] + (st * char) + value[end:]
+#         return wrapper
+#     return strip_range_decorator
+#
+# @strip_range(3, 20, '*')
+# def say_beegeek():
+#     return 'beegeek'
+#
+# print(say_beegeek())
 
-def make_html(tag):
-    def make_html_decorator(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            value = func(*args, **kwargs)
-            return f'<{tag}>{value}</{tag}>'
-        return wrapper
-    return make_html_decorator
+'''Task 9.8.19'''
+
+# from functools import wraps
+#
+# def repeat(times):
+#     def repeat_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in range(times):
+#                 value = func(*args, **kwargs)
+#             return value
+#         return wrapper
+#     return repeat_decorator
+#
+# @repeat(3)
+# def say_beegeek():
+#     print('beegeek')
+#
+# say_beegeek()
+
+'''Task 9.8.18'''
+# from functools import wraps
+#
+# def make_html(tag):
+#     def make_html_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             value = func(*args, **kwargs)
+#             return f'<{tag}>{value}</{tag}>'
+#         return wrapper
+#     return make_html_decorator
 
 '''Task 9.8.17'''
 # from functools import wraps
