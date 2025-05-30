@@ -1,14 +1,23 @@
 '''Task 9.8.25'''
-from functools import wraps
-
-def retry(times):
-    def retry_decorator(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            pass
-
-
-
+# from functools import wraps
+#
+# def retry(times):
+#     def retry_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in range(times):
+#                 try:
+#                     value = func(*args, **kwargs)
+#                     return value
+#                 except:
+#                     pass
+#             raise MaxRetriesException
+#         return wrapper
+#     return retry_decorator
+#
+#
+# class MaxRetriesException(Exception):
+#     pass
 
 '''Task 9.8.24'''
 # from functools import wraps
