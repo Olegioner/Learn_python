@@ -1,3 +1,43 @@
+'''Task 9.8.23'''
+from functools import wraps
+
+def add_attr(**names):
+    def add_attr_decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+
+
+'''Task 9.8.22'''
+# from functools import wraps
+#
+# def takes(*args):
+#     type_list = args
+#     def taker_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             value = func(*args, **kwargs)
+#             if all(map(lambda x: 1 if type(x) in type_list else 0, [*args, *kwargs.values()])):
+#                 return value
+#             else:
+#                 raise TypeError
+#         return wrapper
+#     return taker_decorator
+
+'''Task 9.8.21'''
+# from functools import wraps
+#
+# def returns(datatype):
+#     def returns_decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             value = func(*args, **kwargs)
+#             if isinstance(value, datatype):
+#                 return value
+#             else:
+#                 raise TypeError
+#         return wrapper
+#     return returns_decorator
+
 '''Task 9.8.20'''
 # from functools import wraps
 #
