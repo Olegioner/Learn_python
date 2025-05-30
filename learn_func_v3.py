@@ -1,11 +1,43 @@
-'''Task 9.8.23'''
+'''Task 9.8.25'''
 from functools import wraps
 
-def add_attr(**names):
-    def add_attr_decorator(func):
+def retry(times):
+    def retry_decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
+            pass
 
+
+
+
+'''Task 9.8.24'''
+# from functools import wraps
+#
+# def ignore_exception(*doctype):
+#     def ignore_exception_dec(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             try:
+#                 value = func(*args, **kwargs)
+#                 return value
+#             except (doctype) as e:
+#                 print(f'Исключение {type(e).__name__} обработано')
+#         return wrapper
+#     return ignore_exception_dec
+
+'''Task 9.8.23'''
+# from functools import wraps
+#
+# def add_attrs(**names):
+#     def add_attrs_decorator(func):
+#         for k in names.keys():
+#             func.__dict__.setdefault(k, names[k])
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             value = func(*args, **kwargs)
+#             return value
+#         return wrapper
+#     return add_attrs_decorator
 
 '''Task 9.8.22'''
 # from functools import wraps
