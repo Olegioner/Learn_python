@@ -1,3 +1,35 @@
+'''Task 9.9.25'''
+from functools import lru_cache
+
+
+'''Task 9.9.24'''
+# from functools import lru_cache
+# import sys
+#
+# lru_cache()
+# def forget_word(words):
+#     for el in words:
+#         print(''.join(sorted(el)))
+#
+# input_words = [el.strip() for el in sys.stdin]
+#
+# forget_word(input_words)
+
+
+'''Task 9.9.11'''
+# from functools import partial
+#
+# def send_email(name, email_address, text):
+#     return f'{name}, {text}({email_address})'
+#
+# to_Timur = partial(send_email, 'Тимур', 'timyrik20@beegeek.ru')
+#
+# send_an_invitation=partial(send_email, text='Школа BEEGEEK приглашает Вас на новый курс по программированию на языке Python. тутут....')
+#
+#
+# print(send_an_invitation("Тимур", "timyrik20@beegeek.ru"))
+
+
 '''Task 9.8.25'''
 # from functools import wraps
 #
