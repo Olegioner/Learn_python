@@ -1,3 +1,126 @@
+'''Task 10.4.12'''
+class DictItemsIterator:
+    def __init__(self, data):
+        self.data = data
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if len(self.data) == 0:
+            raise StopIteration
+
+
+'''Task 10.4.11'''
+
+# class PowerOf:
+#     def __init__(self, number):
+#         self.number = number
+#         self.start = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.start += 1
+#         return self.number ** self.start
+
+'''Task 10.4.10'''
+
+# class Fibonacci:
+#     def __init__(self):
+#         self.a, self.b = 0, 1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.a, self.b = self.b, self.a + self.b
+#         return self.a
+
+'''Task 10.4.9'''
+
+# class Square:
+#     def __init__(self, n):
+#         self.n = n
+#         self.step = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.step += 1
+#         if self.step > self.n:
+#             raise StopIteration
+#         return self.step ** 2
+#
+# squares = Square(1)
+#
+# print(list(squares))
+
+'''Task 10.4.8'''
+# class BoundedRepeater:
+#     def __init__(self, obj, times):
+#         self.obj = obj
+#         self.times = times
+#         self.count = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.count += 1
+#         if self.count > self.times:
+#             raise StopIteration
+#         return self.obj
+#
+# geek = BoundedRepeater('geek', 1)
+#
+# print(next(geek))
+#
+#
+# try:
+#     print(next(geek))
+# except StopIteration:
+#     print('Error')
+
+
+'''Task 10.4.7'''
+# class Repeater:
+#     def __init__(self, obj):
+#         self.obj = obj
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         return self.obj
+
+
+'''Task 10.3.16'''
+# from random import randint
+# def random_numbers(left, right):
+#     return iter(lambda: randint(left, right), -1)
+
+'''Task 10.3.15'''
+# def is_iterator(obj):
+#     try:
+#         if obj == iter(obj):
+#             return True
+#         else:
+#             return False
+#     except TypeError:
+#         return False
+
+'''Task 10.3.14'''
+# def is_iterable(obj):
+#     try:
+#         iter(obj)
+#         return True
+#     except TypeError:
+#         return False
+
+
 '''Task 10.2.24'''
 
 # def get_min_max(iterable):
