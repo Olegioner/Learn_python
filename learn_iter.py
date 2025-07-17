@@ -1,14 +1,159 @@
+'''Task 10.4.17'''
+
+# class Xrange:
+#     def __init__(self, start, end, step=1):
+#         self.start = start - step
+#         self.end = end
+#         self.step = step
+#
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.start += self.step
+#         if self.step < 0:
+#             if self.end >= self.start:
+#                 raise StopIteration
+#         elif self.step > 0:
+#             if self.start >= self.end:
+#                 raise StopIteration
+#
+#         return self.start
+
+'''Task 10.4.16'''
+
+# class Alphabet:
+#     def __init__(self, language):
+#         self.language = language
+#         self.alphabet = {'ru': [chr(el) for el in range(1072, 1104)],
+#                          'en':[chr(el) for el in range(97, 123)]}
+#         self.step = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.step += 1
+#         if self.step == len(self.alphabet[self.language]):
+#             self.step = 0
+#         return self.alphabet[self.language][self.step]
+
+
+'''Task 10.4.15'''
+# from random import randint
+#
+# class RandomNumbers:
+#     def __init__(self, left, right, n):
+#         self.left = left
+#         self.right = right
+#         self.n = n
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.n -= 1
+#         if self.n < 0:
+#             raise StopIteration
+#         return randint(self.left, self.right)
+#
+#
+# iterator = RandomNumbers(-1000, -900, 4)
+#
+# print(next(iterator) in range(-1000, -899))
+# print(next(iterator) in range(-1000, -899))
+# print(next(iterator) in range(-1000, -899))
+# print(next(iterator) in range(-1000, -899))
+#
+# try:
+#     next(iterator)
+# except StopIteration:
+#     print('Error')
+
+
+'''Task 10.4.14'''
+# class Cycle:
+#     def __init__(self, iterable):
+#         self.iterable = iterable
+#         self.step = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.step += 1
+#         if self.step == len(self.iterable):
+#             self.step = 0
+#         return self.iterable[self.step]
+#
+#
+#
+#
+# cycle = Cycle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+#
+# for _ in range(100):
+#     print(next(cycle))
+'''Task 10.4.13'''
+# class CardDeck:
+#     def __init__(self):
+#         self.num = ['2', '3', '4', '5', '6', '7', '8', '9',
+#                     '10', 'валет', 'дама', 'король', 'туз']
+#         self.suits = ['пик', 'треф', 'бубен', 'червей']
+#         self.step = -1
+#         self.step_num = -1
+#         self.step_suits = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.step += 1
+#         self.step_num += 1
+#         if self.step_num > 12:
+#             self.step_suits += 1
+#             self.step_num = 0
+#         if self.step == 52:
+#             raise StopIteration
+#         return f'{self.num[self.step_num]} {self.suits[self.step_suits]}'
+#
+#
+#
+# cards1 = list(CardDeck())
+# cards2 = tuple(CardDeck())
+# cards3 = list(CardDeck())
+#
+# print(cards1)
+# print(cards2)
+# print(cards3)
+
 '''Task 10.4.12'''
-class DictItemsIterator:
-    def __init__(self, data):
-        self.data = data
+# class DictItemsIterator:
+#     def __init__(self, data):
+#         self.data = data
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if len(self.data) == 0:
+#             raise StopIteration
+#         for el in self.data:
+#             return el, self.data.pop(el)
+#
+#
+# data = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7}
+#
+# pairs = DictItemsIterator(data)
+#
+# print(tuple(pairs))
+#
+#
+# try:
+#     print(next(pairs))
+# except StopIteration:
+#     print('Error')
 
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if len(self.data) == 0:
-            raise StopIteration
 
 
 '''Task 10.4.11'''
