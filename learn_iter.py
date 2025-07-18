@@ -1,3 +1,46 @@
+
+'''Task 10.5.18'''
+# def reverse(sequence):
+#     for el in sequence[::-1]:
+#         yield el
+
+
+'''Task 10.5.17'''
+# def primes(left, right):
+#     for i in range(left, right + 1):
+#         count = 0
+#         for j in range(1, i + 1):
+#             if i % j == 0:
+#                 count += 1
+#         if count == 2:
+#             yield i
+#
+# generator = primes(6, 36)
+#
+# print(next(generator))
+# print(next(generator))
+
+'''Task 10.5.16'''
+# def alternating_sequence(count=None):
+#     num = 0
+#     while num != count:
+#         num += 1
+#         if num % 2 == 0:
+#             yield num * (-1)
+#         else:
+#             yield num
+
+
+'''Task 10.5.15'''
+
+# def simple_sequence():
+#     num = 1
+#     while True:
+#         for n in range(num):
+#             yield num
+#         num += 1
+
+
 '''Task 10.4.17'''
 
 # class Xrange:
