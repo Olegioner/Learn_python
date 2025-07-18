@@ -1,3 +1,33 @@
+'''Task 10.5.20'''
+
+# def card_deck(suit):
+#     num = ['2', '3', '4', '5', '6', '7', '8', '9',
+#            '10', 'валет', 'дама', 'король', 'туз']
+#     suits = ['пик', 'треф', 'бубен', 'червей']
+#     suits.remove(suit)
+#     while True:
+#         for s in suits:
+#             for n in num:
+#                 yield f'{n} {s}'
+#
+#
+# generator = card_deck('треф')
+# cards = [next(generator) for _ in range(40)]
+#
+# print(*cards)
+'''Task 10.5.19'''
+# from datetime import timedelta, date
+#
+# def dates(start, count=None):
+#     step = 0
+#     try:
+#         while step != count:
+#             yield start
+#             start += timedelta(days=1)
+#             step += 1
+#     except OverflowError:
+#         return
+
 
 '''Task 10.5.18'''
 # def reverse(sequence):
