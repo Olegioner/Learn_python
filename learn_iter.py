@@ -1,4 +1,61 @@
-'''Task 10.5.20'''
+'''Task 10.5.26'''
+# class Iterator:
+#     def __init__(self):
+#         self.count = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.count += 1
+#         return self.count
+#
+#
+# infinity_num = Iterator()
+#
+#
+#
+# def palindromes():
+#     yield from filter(lambda x: str(x) == str(x)[::-1], infinity_num)
+
+
+# generator = palindromes()
+# numbers = [next(generator) for _ in range(30)]
+#
+# print(*numbers)
+
+
+generator = palindromes()
+
+for _ in range(10_000):
+    next(generator)
+
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+
+
+
+'''Task 10.5.25'''
+
+# def matrix_by_elem(matrix):
+#     for row in matrix:
+#         yield from row
+#
+#
+#
+# matrix = [[1, 2, 3],
+#           [4, 5, 6],
+#           [7, 8, 9]]
+#
+# print(*matrix_by_elem(matrix))
+# '''Task 10.5.20'''
 
 # def card_deck(suit):
 #     num = ['2', '3', '4', '5', '6', '7', '8', '9',
